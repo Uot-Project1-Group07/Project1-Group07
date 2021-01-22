@@ -18,7 +18,16 @@ var cityClicked = function (event) {
     $('#select')
     .dropdown('get value')
 
+    if (citySelectredDropDownEl == "Gender") {
+        // Do nothing
+    } else {
+
     alert(citySelectredDropDownEl);
+
+    // $('#select')
+    // .dropdown('restore defaults')
+   
+    }
 
     //let cityClicked = event.target.getAttribute("data-city")
     // if (cityClicked){
