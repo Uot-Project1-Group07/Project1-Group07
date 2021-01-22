@@ -1,0 +1,92 @@
+/* style for chat section added*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+
+.chat-window{
+    height: 100vh;
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.click-img {
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    position: fixed;
+    bottom: 23px;
+    right: 28px; 
+  }
+
+#myForm-chat{
+    width: 300px;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 2px 20px rgba(0,0,0,0.4);
+    background-color: dodgerblue;   
+    position: fixed;
+    bottom: 6px;
+    right: 6px;
+}
+
+.header-chat h1{
+    color: white;
+    padding: 10px;
+}
+
+.closeicon{
+    margin-left: 80px;
+    cursor: pointer;
+    font-size:32px
+}
+
+.body-chat{
+    flex:1;
+    color:white;
+    background-color: rgba(43, 40, 40, 0.7);
+    padding: 20px 30px;
+}
+
+.message{
+    background-color: dodgerblue;
+    padding: 10px;
+    color: white;
+    width: fit-content;
+    border-radius:10px ;
+    margin-bottom: 15px;
+}
+
+.user_message{
+    margin-left: auto;
+    background-color: white;
+    color: black;
+}
+
+.footer-chat form{
+    display: flex;
+}
+
+.footer-chat form input{
+    flex:1;
+    height: 40px;
+    border: 1px solid dodgerblue;
+    outline: none;
+    padding-left: 5px;
+    font-size: 16px;
+}
+
+.footer-chat form button{
+    width: 70px;
+    font-size: 18px;
+    border: 1px solid dodgerblue;
+    outline: none;
+    background-color: dodgerblue;
+    color: white;
+    cursor: pointer;
+}
