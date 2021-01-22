@@ -50,10 +50,18 @@
               <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
             </div>
             <div class="card-content">
-              <p>Here a date is to be picked and then the DOM will be manupulated to show the date and the symptoms that have been known to be shown during those days.</p>
+              <p>The date picked here will be passed to the DOM to be used to create the next 10 days of possible symptom progrssion.</p>
             </div>
           </div>
         </div>
+      </div>
+
+      <!-- Tag to where the DOM will be manupulated-->
+      <a class="waves-effect waves-light btn" id="clicked">Click to get the dates info</a>
+
+      <div id="dates_info">
+          <ul id="date">
+          </ul>
       </div>
 
       <div class="row">
@@ -141,6 +149,8 @@
       <!-- Compiled and minified JavaScript -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> 
       <script type = "text/javascript" src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>       
+      <!--My Javascript coding-->
+      <script src="script.js"></script>
     </div>
   </body>
 </html>
