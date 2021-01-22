@@ -4,7 +4,7 @@
     display: flex;
     flex-wrap: wrap;
     height: 300px;
-    background-image: url("../images/hero-img.jpg");
+    background-image: url("../images/vector-banner-with-the-group-of-happy-people.jpg");
     border-top-left-radius: 30px 30px;
     border-top-right-radius: 30px 30px;
     border-bottom-left-radius: 30px 30px; /* border-radious bottom sides with bottom border changed also*/
@@ -14,3 +14,6 @@
    
   }
 
+.dropdown-trigger {
+    margin-bottom: 5px;
+}
