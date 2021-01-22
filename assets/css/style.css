@@ -1,0 +1,16 @@
+
+.hero { /* Here section is a flex container */
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    height: 300px;
+    background-image: url("../images/hero-img.jpg");
+    border-top-left-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+    border-bottom-left-radius: 30px 30px; /* border-radious bottom sides with bottom border changed also*/
+    border-bottom-right-radius: 30px 30px;
+    background-size: cover; /* Image will cover the background */
+    background-position:  100% 13%; /* Aligned the image to show the top of the tower*/
+   
+  }
+
