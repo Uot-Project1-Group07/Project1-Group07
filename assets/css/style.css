@@ -1,0 +1,62 @@
+/*Joke section style*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  .joke-sec {
+    max-height: 70vh;
+    width: 80%;
+    padding: 100px 0;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    font-size: 10px;
+    margin-top: 100px;
+  }
+  .title-joke {
+    position: absolute;
+    margin-left: 50px;
+    top: 160px;
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+  }
+  .container-joke {
+    width: 60%;
+    max-width: 300px;  
+    height: auto;
+    border-radius: 8px;
+    border :0.3rem solid orange;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .container-joke p {
+    font-size: 17px;
+    line-height: 1.1rem;
+    text-align: left;
+    color:red;
+    font-weight: 300;
+    font-family: "Montserrat";
+  }
+  
+  #clickme
+  {
+      outline: none;
+      border: none;
+      align-self: flex-end;
+      margin-top: 10px;
+      padding: 5px 5px;
+      background: orange;
+      font-size: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 3px rgb(226, 174, 115);
+      cursor: pointer;
+      color: rgb(214, 29, 29);
+      }
+      
+  #clickme:hover{
+      background-color: rgb(207, 197, 173);
+   }
