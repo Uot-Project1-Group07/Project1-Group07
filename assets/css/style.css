@@ -14,6 +14,33 @@
    
   }
 
+.left-column {
+    margin-top: 12px;
+}
+
+.middle-column {
+    padding-right: 20px;
+}
 .dropdown-trigger {
     margin-bottom: 5px;
+}
+
+.btn-links {
+    font-size: 10px;
+    text-align: left;
+}
+
+.btn-city {
+    font-size: 10px;
+    text-align: left;
+}
+
+.links-related-container{
+    display: flex;
+    flex-direction: column
+}
+
+.covid-related-conatiner {
+    display: flex;
+    flex-direction: column
 }
