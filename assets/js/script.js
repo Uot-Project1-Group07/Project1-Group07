@@ -7,7 +7,7 @@ $(document).ready(function() { // Wait for the DOM to be ready for window., java
       });
         
       
-      
+
 
 
         alert(
@@ -58,8 +58,6 @@ var cityClicked = function (event) {
 citiesContainerEl.addEventListener("click", cityClicked)
 
 
-        
-
 
 });
 // var instance = M.FormSelect.getInstance(elem);
@@ -71,3 +69,33 @@ citiesContainerEl.addEventListener("click", cityClicked)
 // var elems = document.querySelectorAll('select');
 // var instances = M.FormSelect.init(elems, options);
 // });
+
+
+//define global variables
+var buttonEl = document.querySelector("#clickme");
+var jokeDivEl = document.querySelector(".joke");
+//load on pageload
+document.addEventListener("DOMContentLoaded", displayJock);
+
+//function to load a random joke data
+async function displayJock() {
+try
+  {
+  var jokeUrl = await fetch("https://icanhazdadjoke.com/", {
+    headers: {
+      Accept: "application/json"}
+    })
+    //wait till response is ok
+    var jokeObj = await jokeUrl.json();
+    jokeDivEl.innerHTML = jokeObj.joke;
+  }
+  catch(err)
+  {
+    console.log(err);
+  }
+};
+
+//load more jokes on click of click me button
+buttonEl.addEventListener("click", displayJock);
+
+
