@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Covid Search by City Test Page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+</head>
+<body>
+  <h1>Test</h1>
+  <div id="covid-stats" class="card-panel">
+    <div id="canada-stats">
+      <h4>Positive Stats for Canada</h4>
+      <h5 id="canada-recovered-new">New Recoveries: <span id="CArecoverednew"></span></h5>
+      <h5 id="canada-recovered">Total Recovered: <span id="CArecovered"></span></h5>
+      <h5 id="canada-vaccinated-new">New Vaccinations: <span id="CAvaccinatednew"></span></h5>
+      <h5 id="canada-vaccinated">Total Vaccinated: <span id="CAvaccinated"></span></h5>
+    </div>
+    <div class="input-field col s12 m6 hoverable">
+      <select id="city-select" class="browser-default">
+        <option value="" disabled selected>Choose a City/Region</option>
+        <option value="4832">AB-Calgary</option>
+        <option value="4833">AB-Central</option>
+        <option value="4834">AB-Edmonton</option>
+        <option value="4835">AB-North</option>
+        <option value="4831">AB-South</option>
+        <option value="591">BC-Fraser</option>
+        <option value="592">BC-Interior</option>
+        <option value="593">BC-Island</option>
+        <option value="594">BC-Northern</option>
+        <option value="595">BC-Vancouver Coastal</option>
+        <option value="4603">MB-Interlake-Eastern</option>
+        <option value="4604">MB-Northern</option>
+        <option value="4602">MB-Prairie Mountain</option>
+        <option value="4605">MB-Southern Health</option>
+        <option value="4601">MB-Winnipeg</option>
+        <option value="1301">NB-Moncton Area</option>
+        <option value="1302">NB-Saint John Area</option>
+        <option value="1303">NB-Fredericton Area</option>
+        <option value="1304">NB-Edmunston Area</option> 
+        <option value="1305">NB-Campbellton Area</option>
+        <option value="1306">NB-Bathurst Area</option>
+        <option value="1307">NB-Miramichi Area</option>
+        <option value="1012">NL-Central</option>
+        <option value="1011">NL-Eastern</option>
+        <option value="1014">NL-Labrador-Grenfell</option>
+        <option value="1013">NL-Western</option>
+        <option value="1204">NS-Central</option>
+        <option value="1203">NS-Eastern</option>
+        <option value="1202">NS-Northern</option>
+        <option value="1201">NS-Western</option>
+        <option value="6201">NU-Nunavut</option>
+        <option value="6101">NT-Northwest Territories</option>
+        <option value="3526">ON-Algoma</option>
+        <option value="3527">ON-Brant</option>
+        <option value="3540">ON-Chatham-Kent</option>
+        <option value="3530">ON-Durham</option>
+        <option value="3558">ON-Eastern</option>
+        <option value="3533">ON-Grey Bruce</option>
+        <option value="3534">ON-Haldimand-Norfolk</option>
+        <option value="3535">ON-Haliburton Kawartha Pineridge</option>
+        <option value="3536">ON-Halton</option>
+        <option value="3537">ON-Hamilton</option>
+        <option value="3538">ON-Hastings Prince Edward</option>
+        <option value="3539">ON-Huron Perth</option>
+        <option value="3541">ON-Kingston Frontenac Lennox & Addington</option>
+        <option value="3542">ON-Lambton</option>
+        <option value="3543">ON-Leeds Grenville & Lanark</option>
+        <option value="3544">ON-Middlesex-London</option>
+        <option value="3546">ON-Niagara</option>
+        <option value="3547">ON-North Bay Parry Sound</option>
+        <option value="3549">ON-Northwestern</option>
+        <option value="3551">ON-Ottawa</option>
+        <option value="3553">ON-Peel</option>
+        <option value="3555">ON-Peterborough</option>
+        <option value="3556">ON-Porcupine Timmins</option>
+        <option value="3557">ON-Renfrew</option>
+        <option value="3560">ON-Simcoe Muskoka</option>
+        <option value="3575">ON-Southwestern</option>
+        <option value="3561">ON-Sudbury</option>
+        <option value="3562">ON-Thunder Bay</option>
+        <option value="3563">ON-Timiskaming</option>
+        <option value="3595">ON-Toronto</option>
+        <option value="3565">ON-Waterloo</option>
+        <option value="3566">ON-Wellington Dufferin Guelph</option>
+        <option value="3568">ON-Windsor-Essex</option>
+        <option value="3570">ON-York</option>
+        <option value="1100">PE-Prince Edward Island</option>
+        <option value="2408">QC-Abitibi-Témiscamingue</option>
+        <option value="2401">QC-Bas-Saint-Laurent</option>
+        <option value="2403">QC-Capitale-Nationale</option>
+        <option value="2412">QC-Chaudière-Appalaches</option>
+        <option value="2409">QC-Côte-Nord</option>
+        <option value="2405">QC-Estrie</option>
+        <option value="2411">QC-Gaspésie-Îles-de-la-Madeleine</option>
+        <option value="2414">QC-Lanaudière</option>
+        <option value="2415">QC-Laurentides</option>
+        <option value="2413">QC-Laval</option>
+        <option value="2404">QC-Mauricie</option>
+        <option value="2416">QC-Montérégie</option>
+        <option value="2406">QC-Montréal</option>
+        <option value="2410">QC-Nord-du-Québec</option>
+        <option value="2417">QC-Nunavik</option>
+        <option value="2407">QC-Outaouais</option>
+        <option value="2402">QC-Saguenay</option>
+        <option value="2418">QC-Terres-Cries-de-la-Baie-James</option>
+        <option value="473">SK-Central</option>
+        <option value="471">SK-Far North</option>
+        <option value="472">SK-North</option>
+        <option value="475">SK-Regina</option>
+        <option value="474">SK-Saskatoon</option>
+        <option value="476">SK-South</option>
+        <option value="6001">YT-Yukon</option>
+      </select>
+    </div>
+  </div>
+  <script src="./assets/script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>
