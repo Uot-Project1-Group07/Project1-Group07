@@ -1,5 +1,14 @@
 $(document).ready(function() { // Wait for the DOM to be ready for window., javascript/jquery and others
 
+    // Menu example
+
+    $(document).ready(function(){
+        $('.sidenav').sidenav();
+      });
+        
+      
+      
+
 
         alert(
         $('#select')

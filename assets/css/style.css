@@ -137,3 +137,13 @@ html, body {
     font-size: 1.5rem;
     grid-row: 2;
   }
+
+
+     /* This will be applied on any screen smaller than 575px */
+@media screen and  (max-width: 605px) {
+
+
+
+
+}
+
