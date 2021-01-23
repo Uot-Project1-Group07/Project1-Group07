@@ -24,4 +24,19 @@ var datePicker = function(e){
     input.hidden = true;
 }
 
+  //carousel
+  $(document).ready(function(){
+    $('.carousel-slider').carousel({
+        fullWidth: true,
+        indicators: true,
+        dist: -100
+    });
+
+    //function for auto play carousel-slider
+    setInterval(function(){
+        $('.carousel-slider').carousel('next');
+    },3500);
+  });
+
+
 input.addEventListener('input', datePicker);
