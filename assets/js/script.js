@@ -24,8 +24,11 @@ var cityClicked = function (event) {
 
     alert(citySelectredDropDownEl);
 
-    // $('#select')
-    // .dropdown('restore defaults')
+    $('#select')
+    .dropdown('restore defaults')
+
+    $('#select')
+    .dropdown('clear')
    
     }
 
