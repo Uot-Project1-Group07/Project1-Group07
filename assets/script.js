@@ -6,7 +6,7 @@ var canadaVaccineNewEl = document.querySelector("#CAvaccinatednew");
 var areaStatsEl = document.querySelector("#area-stats");
 
 
-//get data for slected area
+//get data for selected area
 var getAreaData = function(area) {
   var areaSearchUrl = "https://api.opencovid.ca/summary?loc=" + area;
   
