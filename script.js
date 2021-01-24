@@ -11,6 +11,9 @@ var dates = function (){
     //passing the date so we can generate the dates according to the date given
     console.log(log.length);
 
+    var dataCitation = document.createElement('p');
+
+
     //can I make an image pop out
     var covidProImage = document.createElement("img");
     covidProImage.setAttribute('text-align','center');  //center aligning not working for the image
@@ -104,7 +107,7 @@ var submit = document.querySelector("#submitButton");
 
 //user inputs
 var user = document.getElementById('user');
-var userComment = document.querySelector("#userComments");
+var userComment = document.querySelector("#user_2");
 
 //Create div.card. This inside it div.card-content
 var commentArea = document.querySelector('#comment_info')
@@ -118,12 +121,13 @@ var commentor = function (e){
   var comment = document.createElement('li');
   comment.className = "collection-item";
   var random = Math.random();   //for testing only
-  comment.innerHTML = "<div class='card'> <span class='card-title'>"+ "Manjula" +"</span> <div class='card-content'>" + "What is my comment "+random + "</div></div>";
+  comment.innerHTML = "<div class='card'> <span class='card-title'>"+ "Manjula" +
+  "</span> <div class='card-content'>" + "What is my comment "+random + "</div></div>";
   commentArea.prepend(comment);  //to add to the top
 
   //console.dir(user);
-  //.log('User: '+ user.value);
-  //console.log('User\'s comments: '+ userComment.value);
+  console.log('User: '+ user.value);
+  console.log('User\'s comments: '+ userComment.value);
 }
 
 //*********************** */
