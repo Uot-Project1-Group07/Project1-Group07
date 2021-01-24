@@ -6,10 +6,10 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <!-- My CSS file here-->
-
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!-- My CSS file here-->
+
   </head>
 
   <body>
@@ -36,8 +36,8 @@
     <section>
       <div class="carousel carousel-slider center">
           <div class="carousel-fixed-item center white-text">
-              <h3 style="font-style: italic;">“Your fear is 100% dependent on you for its survival.”
-                  </h3>
+              <h4  style="font-style: italic;">“Your fear is 100% dependent on you for its survival.”
+                  </h4>
               <p>― Steve Maraboli, Life, the Truth, and Being Free</p>                
           </div>
 
@@ -48,7 +48,6 @@
 
       </div>
     </section> 
-
 
       <blockquote class="flow-text"><span class="red-text lighten-1" style="font-size: larger;">I am scared</span>
       and even angry about. Maybe you took the best car possible and still got it or didn't believe it could happen to you and it did. Either way you are here now. 
@@ -73,9 +72,40 @@
           </ul>
       </div>
 
+      
       <div class="row">
         <div class="col s6">
-          <h4 class="header">Emergency</h4>
+
+          <!--symptoms-->
+          <h4 class="flow-text">Keep track of your symptoms and what might might show up</h4>
+            <ul class="collection z-depth-2">
+              <li class="collection-item">Fever or chills</li>
+              <li class="collection-item">Coughs</li>
+              <li class="collection-item">Fatigue</li>
+              <li class="collection-item">Muscle or body aches</li>
+              <li class="collection-item">Headaches</li>
+              <li class="collection-item">New loss of taste or smell</li>
+              <li class="collection-item">Sore throat</li>
+              <li class="collection-item">Congestion or runny nose</li>
+              <li class="collection-item">Nausea or vomiting</li>
+              <li class="collection-item">Diarrhea</li>
+              <li class="collection-item right-align">
+                <!-- Modal Trigger -->
+                <a class="waves-effect waves-light btn modal-trigger white black-text" href="#modal1">COVID-19 symptoms</a>
+
+                <!-- Modal Structure -->
+                <div id="modal1" class="modal">
+                  <div class="modal-content">
+                    <embed src="./images/cropped.pdf" width="1000px" height="990px" />
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <p>source: <a href="https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html">CDC.org</a></p>
+
+
+          <!--Emergency-->
+          <h4 class="flow-text">Emergency</h4>
           <div class="card stacked">
             <div class="card-content">
               <p><span class="red-text" style="font-size: larger; font-weight: bold;">Call 911</span> - and let them know you are a Covid patient</p>
@@ -83,11 +113,48 @@
           </div>
         </div>
 
+        <!--Govt. funding-->
         <div class="col s6">
-          <h4 class="header">Govt. funding</h4>
+          <h4 class="flow-text right-align">Govt. funding</h4>
+          <ul class="collapsible">
+            <li>
+              <div class="collapsible-header"><i class="material-icons">arrow_drop_down_circle</i>Emplyment Insurence (EI) program</div>
+              <div class="collapsible-body">
+                <span>As of September 27, 2020 (if eligable) can get a minimim benefit rate of $500 per week before taxes in most cases.</span>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header"><i class="material-icons">arrow_drop_down_circle</i>Canada Recovery Benefit (CRB)</div>
+              <div class="collapsible-body"><span>CRB provides $500 per week up to 26 weeks for workers who have stopped working or had their income reduced by at least 50% due to COVID-19. One's who are for eligible CRB - Employment Insurence (EI)</span></div>
+            </li>
+            <li>
+              <div class="collapsible-header"><i class="material-icons">arrow_drop_down_circle</i>Canada Recovery Sickness Benefit (CRSB)</div>
+              <div class="collapsible-body">
+                <span>CRSB provides $500 per week for up to a mazimum of two weeks for workers who...</span>
+                <ul class="collection">
+                  <li class="collection-item">- Are unable to work for at least 50% of the week because they contracted COVID-19</li>
+                  <li class="collection-item">- Are self-isolated for reasons related to COVID-19</li>
+                  <li class="collection-item">- have underlying conditions, are undergoing treatments or have contracted other sicknesses that, in the opinion of a medical practitioner, nurse practitioner, person in authority, government or public health authority, would make them more susceptible to COVID-19.</li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header"><i class="material-icons">arrow_drop_down_circle</i>Canada Recovery Caregiving Benefit (CRB)</div>
+              <div class="collapsible-body"><span>CRCB provides $500 per week for up to 26 weeks per household for workers:</span>
+                <ul class="collection">
+                  <li class="collection-item">- unable to work for at least 50% of the week because they must care for a child under the age of 12 or family member because schools, day-cares or care facilities are closed due to COVID-19</li>
+                  <li class="collection-item">- because the child or family member is sick and/or required to quarantine or is at high risk of serious health implications because of COVID-19.</li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header"><i class="material-icons">arrow_drop_down_circle</i>Mortgage payment deferral</div>
+              <div class="collapsible-body"><span>Homeowners who are facing financial hardship might be eligible for mortgage deffereal.</span></div>
+            </li>
+          </ul>
           <div class="card stacked">
             <div class="card-content">
-              <p>list of those resources goes here</p>
+                        <p>Links to all the above resources can be found here</p>
               <p><a href="https://www.canada.ca/en/department-finance/economic-response-plan.html#individuals">
                 Canada's COVID-19 Economic response plan</a></p>
             </div>
@@ -109,18 +176,13 @@
       <div>Content / images form the websites and the link to more information for those websites here</div>
       <p>Maybe each in like a card</p><br>
 
+      <!-- Possibilty of getting Covid again-->
       <h4>Can I get Covid again?</h4>
-      <p>(DATE) and the latest inforamtion there is about here</p><br>
+      <h5 class="flow-text blue lighten-3">Cases of reinfection with COVID-19 have been reported, but remain rare​.​</h5>
+      <p>In general, reinfection means a person was infected (got sick) once, recovered, and then later became infected again. Based on what we know from similar viruses, some reinfections are expected. We are still learning more about COVID-19.</p>
+      <p><a href="https://www.cdc.gov/coronavirus/2019-ncov/your-health/reinfection.html">Link to the CDC website</a></p><br>
      
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac est dapibus, elementum velit ut, posuere tellus. Morbi eget leo et eros tempor feugiat quis eu libero. Pellentesque laoreet nisi at auctor pharetra. Nunc leo elit, rhoncus quis rhoncus at, volutpat nec justo. Proin in ex dolor. Nam euismod tincidunt lacus sit amet porta. Vivamus sodales magna quis est lobortis tincidunt. Fusce eu viverra turpis. Cras metus lorem, auctor eu sem vel, mattis dapibus sem. Sed nec vulputate arcu. Praesent dolor orci, molestie a mauris sit amet, molestie sodales purus. Integer in fermentum turpis. Aenean tempus commodo dui et gravida. Pellentesque augue dolor, feugiat id vehicula in, vulputate id dolor. Nam erat mauris, posuere eu sapien a, vehicula accumsan est. Aliquam erat volutpat.
-
-        Fusce pretium lacus vitae turpis congue suscipit. Maecenas faucibus in lacus at porttitor. Nunc nec felis in risus aliquet rutrum sit amet sit amet nunc. Vestibulum massa nunc, finibus eu lectus vel, porttitor sagittis dui. Vivamus non faucibus tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec enim turpis, euismod ac risus at, mollis sollicitudin enim. Vestibulum interdum posuere ullamcorper. Praesent fringilla vitae ante sed auctor. Cras tincidunt lacinia turpis, at aliquam eros faucibus eget. Curabitur rutrum libero sit amet risus accumsan, vitae pretium lacus rhoncus. Mauris sed risus in metus sagittis consequat porttitor non nisl. Aliquam vel feugiat velit, sed iaculis dui. Etiam aliquet auctor ipsum sed volutpat. Donec neque mauris, tempus fermentum metus quis, gravida tincidunt ipsum. Nullam finibus justo ut porttitor aliquam.
-        
-        Cras ac consequat ipsum, a dignissim nibh. Etiam pretium mi id gravida iaculis. Nunc volutpat tempor tortor, vel molestie tortor viverra nec. Nullam id scelerisque eros. Integer non turpis pellentesque, malesuada risus at, laoreet arcu. Vivamus dapibus felis ac nisl accumsan tincidunt. Maecenas scelerisque metus orci, sed molestie risus ultrices at. Nullam porttitor lectus non metus elementum, quis tempor justo vulputate. Morbi varius pharetra ante ultricies volutpat. Integer tempus purus a tortor convallis efficitur. Aliquam justo felis, ullamcorper sed justo vehicula, eleifend lacinia lorem. Sed id vestibulum est. Nunc a lorem purus. Fusce aliquet fringilla massa a sodales. Integer magna ante, tincidunt et ipsum rutrum, semper vehicula ipsum. Vestibulum non mauris elementum, laoreet odio at, pellentesque risus.
-        
-        Nullam placerat odio mauris, id cursus nibh viverra aliquet. Proin diam lacus, pellentesque ac elementum vitae, commodo commodo felis. Praesent molestie commodo ex, eget condimentum ante malesuada facilisis. Nulla facilisi. Nam bibendum, massa in tristique scelerisque, ex diam consequat dolor, sit amet scelerisque orci dui sed risus. Etiam elementum augue ut lacinia blandit. Cras ac erat eget lectus venenatis dictum eu non nibh. Etiam justo est, vehicula at malesuada sed, rhoncus et lacus.
-      </p>
-      
+      <!-- Comments section here-->      
       <p>Here they have to enter their user name and the comments below it. It will be saved in the local storage.</p><br>
 
       <div class="boxed" style="font-weight: bold;">Any comments of suggestions for the web page is greately appricated. Please list them in the comments section below</div>

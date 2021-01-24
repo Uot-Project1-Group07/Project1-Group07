@@ -48,10 +48,20 @@ var datePicker = function(e){
         dist: -100
     });
 
-    //function for auto play carousel-slider
-    setInterval(function(){
-        $('.carousel-slider').carousel('next');
-    },3500);
+  //Govt. links - collapsibe
+  $(document).ready(function(){
+    $('.collapsible').collapsible();
+  });  
+
+  //Symptoms modal - button
+  $(document).ready(function(){
+    $('.modal').modal();
+  });
+
+  //function for auto play carousel-slider
+  setInterval(function(){
+      $('.carousel-slider').carousel('next');
+  },3500);
   });
 
 
