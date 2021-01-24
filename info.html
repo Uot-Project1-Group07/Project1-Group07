@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+  <head>
+ 
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!-- My CSS file here-->
+    <style>
+      li{
+        list-style: none;
+      }
+
+    </style>
+    <title>Personal Care</title>
+  </head>
+  <body>
+
+  <div class="container">
+
+    <!-- use ##f for colours and create varaibles to link them to the elements with names-->
+    <!-- should I include pagination here???-->
+
+
+      <div>   <!-- Nav bar fixed not working still-->
+        <nav>
+          <div class="nav-wrapper green">
+            <a href="#!" class="brand-logo">Home page</a>
+            <ul class="right">
+              <li><a href="#">Test1</a></li>
+              <li class="active"><a href="#">Test2</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+    <!--caroul-->
+    <section>
+      <div class="carousel carousel-slider center">
+          <div class="carousel-fixed-item center white-text">
+              <h4  style="font-style: italic;">“Your fear is 100% dependent on you for its survival.”
+                  </h4>
+              <p>― Steve Maraboli, Life, the Truth, and Being Free</p>                
+          </div>
+
+          <a href="#" class="carousel-item"><img src="./images/nature1.jpg" alt="image_one"></a>
+          <a href="#" class="carousel-item"><img src="./images/nature2.jpg" alt="image_two"></a>
+          <a href="#" class="carousel-item"><img src="./images/nature3.jpg" alt="image_three"></a>
+          <a href="#" class="carousel-item"><img src="./images/nature4.jpg" alt="image_four"></a>   
+
+      </div>
+    </section> 
+
+      <blockquote class="flow-text"><span class="red-text lighten-1" style="font-size: larger;">I am scared</span>
+      and even angry about. Maybe you took the best car possible and still got it or didn't believe it could happen to you and it did. Either way you are here now. 
+      Even though your mind races to find out where you went wrong it won't help. I too had COVID over the 2019 Christmas days. While I am 
+      in no way qualified to instruct anyone how to proceed from here I thought I would put together below what helped me survive.
+      </blockquote>
+      <br>
+
+      <!-- Tag to where the DOM will be manupulated-->
+      <div class = "row">
+        <form class = "col s12">
+           <div class = "row">               
+              <H2 class="flow-text" style="font-weight: bold;" id="dateInstructions">Please enter the date below you suspect you contracted the virus on.</H2>              
+              <input type = "date" class = "datepicker"/>   
+           </div>            
+        </form>       
+      </div>
+     
+     <!--DOM will show up here-->
+      <div id="dates_info">
+          <ul id="date">
+          </ul>
+      </div>
+      <br>
+
+      <!--Support groups-->
+      <div class="row">
+        <div class="col" style="position: relative;">
+          <img src="images/Spring-Nature-Beautiful-Lands-Banner-support-systems.jpg"  style="height: 100px; width: 100%; object-fit:cover;" alt="">
+          <h3 class="white-text" style="position:absolute; top: -10%; left:52%; font-size:larger;">
+            Some of your main support systems you can lean on to get through this</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s3">
+          <h4>Family</h4>
+          <p>This was my biggest pillar. Someone to talk to about evering that was happening to you. 
+            Even thought they wheren't able to help directly, having someone to talk to daily helped releive the stress a little. 
+            Just be careful when they visit or get incontact with something you have been using.</p>
+        </div>
+
+        <div class="col s3">
+          <h4>Friends & Loved ones</h4>
+          <p>Let your freinds know what you have been going through. Don't be ashamed or embarressed. It will isolate you and couse you even more suffering.
+             Talk to them maybe about their day. It's a good way to distract your mind and also to connect with the outside world.</p>
+        </div>
+
+        <div class="col s3">
+          <h4>Religion</h4>
+          <p>Might not seem like the best place to look for comfort since might feel forsaken. If nothing else, 2020 has tought us that nothing 
+            is permanent and man is just a passenger in the grand scheme of things. Even if you don't fully accept the existance of a diety the 
+            thought of a supernatural being able to aid you will help you keep hope alive. Hope that you might be one of those individulas that are asymptomatic
+            or get through this with minor manifestation of symptoms.
+          </p>
+        </div>
+
+        <div class="col s3">
+          <h4>Games and Web surfing</h4>
+          <p>Playing games was was my goto source of distacting myself and wasting time. If possible invest in a streaming service. You will end up 
+            watching entire series in a few days. Finally I recommend watching comedy shows. It will help you bring your spirits up. Even if it's a little.
+          </p>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col s6">
+
+          <!--symptoms-->
+          <h4 class="flow-text">Keep track of your symptoms progression</h4>
+          <p>don't obsess over every possible variation of the list below that you might feel. But you will know if something is not right. 
+            Don't ignore it. Let someone know just in case atleast.
+          </p>
+            <ul>
+              <li style="list-style-type: square;">Fever or chills</li>
+              <li style="list-style-type: square;">Coughs</li>
+              <li style="list-style-type: square;">Fatigue</li>
+              <li style="list-style-type: square;">Muscle or body aches</li>
+              <li style="list-style-type: square;">Headaches</li>
+              <li style="list-style-type: square;">New loss of taste or smell</li>
+              <li style="list-style-type: square;">Sore throat</li>
+              <li style="list-style-type: square;">Congestion or runny nose</li>
+              <li style="list-style-type: square;">Nausea or vomiting</li>
+              <li style="list-style-type: square;">Diarrhea</li>
+              <li>
+                <!-- Modal Trigger -->
+                <a class="waves-effect waves-light btn modal-trigger white black-text" style="margin-top: 10px" href="#modal1">COVID-19 symptoms</a>
+
+                <!-- Modal Structure -->
+                <div id="modal1" class="modal">
+                  <div class="modal-content">
+                    <embed src="./images/cropped.pdf" width="1000px" height="990px" />
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <p>source: <a href="https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html">CDC.org</a></p>
+
+
+          <!--Emergency-->
+          <h4 class="flow-text">Emergency</h4>
+          <div class="card stacked">
+            <div class="card-content">
+              <p><span class="red-text" style="font-size: larger; font-weight: bold;">Call 911</span> - and let them know you are a Covid patient</p>
+            </div>
+          </div>
+        </div>
+
+        <!--Govt. funding-->
+        <div class="col s6">
+          <h4 class="flow-text right-align">Govt. funding</h4>
+          <ul class="collapsible">
+            <li>
+              <div class="collapsible-header"><i class="material-icons">arrow_drop_down_circle</i>Emplyment Insurence (EI) program</div>
+              <div class="collapsible-body">
+                <span>As of September 27, 2020 (if eligable) can get a minimim benefit rate of $500 per week before taxes in most cases.</span>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header"><i class="material-icons">arrow_drop_down_circle</i>Canada Recovery Benefit (CRB)</div>
+              <div class="collapsible-body"><span>CRB provides $500 per week up to 26 weeks for workers who have stopped working or had their income reduced by at least 50% due to COVID-19. One's who are for eligible CRB - Employment Insurence (EI)</span></div>
+            </li>
+            <li>
+              <div class="collapsible-header"><i class="material-icons">arrow_drop_down_circle</i>Canada Recovery Sickness Benefit (CRSB)</div>
+              <div class="collapsible-body">
+                <span>CRSB provides $500 per week for up to a mazimum of two weeks for workers who...</span>
+                <ul class="collection">
+                  <li class="collection-item">- Are unable to work for at least 50% of the week because they contracted COVID-19</li>
+                  <li class="collection-item">- Are self-isolated for reasons related to COVID-19</li>
+                  <li class="collection-item">- have underlying conditions, are undergoing treatments or have contracted other sicknesses that, in the opinion of a medical practitioner, nurse practitioner, person in authority, government or public health authority, would make them more susceptible to COVID-19.</li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header"><i class="material-icons">arrow_drop_down_circle</i>Canada Recovery Caregiving Benefit (CRB)</div>
+              <div class="collapsible-body"><span>CRCB provides $500 per week for up to 26 weeks per household for workers:</span>
+                <ul class="collection">
+                  <li class="collection-item">- unable to work for at least 50% of the week because they must care for a child under the age of 12 or family member because schools, day-cares or care facilities are closed due to COVID-19</li>
+                  <li class="collection-item">- because the child or family member is sick and/or required to quarantine or is at high risk of serious health implications because of COVID-19.</li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header"><i class="material-icons">arrow_drop_down_circle</i>Mortgage payment deferral</div>
+              <div class="collapsible-body"><span>Homeowners who are facing financial hardship might be eligible for mortgage deffereal.</span></div>
+            </li>
+          </ul>
+          <div class="card stacked">
+            <div class="card-content">
+                        <p>Links to all the above resources can be found here</p>
+              <p><a href="https://www.canada.ca/en/department-finance/economic-response-plan.html#individuals">
+                Canada's COVID-19 Economic response plan</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h3> Please consider before you go out</h3>
+      <ul class="collection">
+        <li class="collection-item">How your actions <b>will</b> effect others.</li>
+        <li class="collection-item">Practice social distancing deligently.</li>
+        <li class="collection-item">Wear a mask anytime you are near anyone.</li>
+      </ul>
+
+      <div>Content / images form the websites and the link to more information for those websites here</div>
+      <p>Maybe each in like a card</p><br>
+
+      <!-- Possibilty of getting Covid again-->
+      <h4>Can I get Covid again?</h4>
+      <h5 class="flow-text blue lighten-3">Cases of reinfection with COVID-19 have been reported, but remain rare​.​</h5>
+      <p>In general, reinfection means a person was infected (got sick) once, recovered, and then later became infected again. Based on what we know from similar viruses, some reinfections are expected. We are still learning more about COVID-19.</p>
+      <p><a href="https://www.cdc.gov/coronavirus/2019-ncov/your-health/reinfection.html">Link to the CDC website</a></p><br>
+   
+      <!-- Comments section here-->      
+      <p>Here they have to enter their user name and the comments below it. It will be saved in the local storage.</p><br>
+      
+      <div class="boxed" style="font-weight: bold;">Any comments of suggestions for the web page is greately appricated. Please list them in the comments section below</div>
+
+      <div class="row">
+        <form class="col s12">
+        <div class="row">
+            <div class="input-field col s2">
+            <img src="./images/john_doe.png" alt="" class="circle responsive-img" style="width: 50%;">   <!-- circular image-->
+            </div>
+            <div class="input-field col s2">
+              <input type="text" class="validate" placeholder="Name" id="user">
+              </div>
+            <div class="input-field col s8">
+                <i class="material-icons prefix">mode_edit</i>
+                <textarea class="materialize-textarea" id="user_2"></textarea>
+                <label for="icon_prefix2">Comment here</label>
+            </div>
+            <div class="col 1">
+              <button class="waves-effect waves-light btn" type="submit" id="submitButton">Submit<i class="material-icons right">send</i></a>
+            </div>
+        </div>
+        </form>
+      </div>
+
+      <!--New comments entered will appear here-->
+      <div id="comment_info">
+        <ul class="collection" id="comment">
+        </ul>
+      </div>
+      <br>
+
+      <!--Footer-->
+      <footer class="page-footer green">
+        <div class="row">
+          <div class="col s12">
+            <h5> Thank you for taking the time to look through the page. Hope it helped you in some way.</h5>
+          </div>
+          <div class="col s12">
+            <p> created with ❤️ by Group 07 year-2021 </p>
+          </div>
+        </div>
+      </footer>
+
+      <!-- Compiled and minified JavaScript -->
+      <script type = "text/javascript" src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>  
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>            
+      <!--My Javascript coding-->
+      <script src="script.js"></script>
+    </div>
+  </body>
+</html>
