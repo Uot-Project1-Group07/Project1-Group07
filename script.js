@@ -114,20 +114,14 @@ var commentArea = document.querySelector('#comment_info')
 
 var commentor = function (e){
 
-  console.log('Submit button was clicked!');
-
   e.preventDefault();
   
   var comment = document.createElement('li');
   comment.className = "collection-item";
   var random = Math.random();   //for testing only
-  comment.innerHTML = "<div class='card'> <span class='card-title'>"+ "Manjula" +
-  "</span> <div class='card-content'>" + "What is my comment "+random + "</div></div>";
+  comment.innerHTML = "<div class='card'> <span class='card-title'>"+ user.value +
+  "</span> <div class='card-content'>" + userComment.value + "</div></div>";
   commentArea.prepend(comment);  //to add to the top
-
-  //console.dir(user);
-  console.log('User: '+ user.value);
-  console.log('User\'s comments: '+ userComment.value);
 }
 
 //*********************** */
