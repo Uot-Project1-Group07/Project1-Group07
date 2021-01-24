@@ -12,7 +12,6 @@ var dates = function (){
     console.log(log.length);
 
 
-
     var day1 = document.createElement("li");
     day1.setAttribute('list-style-type','none');       //NOT working
     day1.innerHTML = "<h5>"+ "Day 1"+ "</h5>" + 
@@ -40,6 +39,34 @@ var datePicker = function(e){
     instructions.hidden = true;
 }
 
+//Submit button
+var submit = document.querySelector("#submitButton");
+
+//user inputs
+var user = document.getElementById('user');
+var userComment = document.querySelector("#userComments");
+
+//Create div.card. This inside it div.card-content
+var commentArea = document.querySelector('#comment_info')
+
+var commentor = function (e){
+
+  console.log('Submit button was clicked!');
+
+  e.preventDefault();
+  
+  var comment = document.createElement('li');
+  var random = Math.random();   //for testing only
+  comment.innerHTML = "<div class='card'> <span class='card-title'>"+ "Manjula" +"</span>" + "<div class='card-content'>" + "What is my comment "+random + "</div></div>";
+  commentArea.prepend(comment);  //to add to the top
+
+  //console.dir(user);
+  //.log('User: '+ user.value);
+  //console.log('User\'s comments: '+ userComment.value);
+}
+
+
+//*********************** */
   //carousel
   $(document).ready(function(){
     $('.carousel-slider').carousel({
@@ -63,6 +90,7 @@ var datePicker = function(e){
       $('.carousel-slider').carousel('next');
   },3500);
   });
-
+//******************************/
 
 input.addEventListener('input', datePicker);
+submit.addEventListener('click',commentor);

@@ -12,6 +12,7 @@
     <style>
 
     </style>
+    <title>Personal Care</title>
   </head>
   <body>
 
@@ -106,7 +107,7 @@
         </div>
 
         <div class="col s3">
-          <h4>Games and net</h4>
+          <h4>Games and Web surfing</h4>
           <p>Playing games was was my goto source of distacting myself and wasting time. If possible invest in a streaming service. You will end up 
             watching entire series in a few days. Finally I recommend watching comedy shows. It will help you bring your spirits up. Even if it's a little.
           </p>
@@ -220,10 +221,10 @@
       <h5 class="flow-text blue lighten-3">Cases of reinfection with COVID-19 have been reported, but remain rare​.​</h5>
       <p>In general, reinfection means a person was infected (got sick) once, recovered, and then later became infected again. Based on what we know from similar viruses, some reinfections are expected. We are still learning more about COVID-19.</p>
       <p><a href="https://www.cdc.gov/coronavirus/2019-ncov/your-health/reinfection.html">Link to the CDC website</a></p><br>
-     
+   
       <!-- Comments section here-->      
       <p>Here they have to enter their user name and the comments below it. It will be saved in the local storage.</p><br>
-
+      
       <div class="boxed" style="font-weight: bold;">Any comments of suggestions for the web page is greately appricated. Please list them in the comments section below</div>
 
       <div class="row">
@@ -233,25 +234,32 @@
             <img src="./images/john_doe.png" alt="" class="circle responsive-img" style="width: 50%;">   <!-- circular image-->
             </div>
             <div class="input-field col s2">
-              <input id="icon_prefix" type="text" class="validate" placeholder="Name">
+              <input id="icon_prefix" type="text" class="validate" placeholder="Name" id="user">
               </div>
             <div class="input-field col s8">
                 <i class="material-icons prefix">mode_edit</i>
-                <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
+                <textarea id="icon_prefix2" class="materialize-textarea" id="userComments"></textarea>
                 <label for="icon_prefix2">Comment here</label>
             </div>
             <div class="col 1">
-              <button class="waves-effect waves-light btn" type="submit">Submit<i class="material-icons right">send</i></a>
+              <button class="waves-effect waves-light btn" type="submit" id="submitButton">Submit<i class="material-icons right">send</i></a>
             </div>
         </div>
         </form>
       </div>
 
+      <!--New comments entered will appear here-->
+      <div id="comment_info">
+        <ul id="comment" style="list-style-type: none;">
+        </ul>
+      </div>
+      <br>
+
       <!--Footer-->
       <footer class="page-footer green">
         <div class="row">
           <div class="col s12">
-            <h5> Thank you for taking the time to look through the page. Hope it helped in some way.</h5>
+            <h5> Thank you for taking the time to look through the page. Hope it helped you in some way.</h5>
           </div>
           <div class="col s12">
             <p> created with ❤️ by Group 07 year-2021 </p>
