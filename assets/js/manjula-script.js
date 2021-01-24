@@ -11,20 +11,30 @@ var dates = function (){
     //passing the date so we can generate the dates according to the date given
     console.log(log.length);
 
-    var dataCitation = document.createElement('p');
-
+    var givenDate = document.createElement('h4');
+    givenDate.setAttribute('text-align','right');
+    givenDate.innerHTML = "<h4 style='text-align:center'>Covid contracted date you gave was <b>"+log+"</b></h4><hr><br>";
+    dateArea.appendChild(givenDate);
 
     //can I make an image pop out
     var covidProImage = document.createElement("img");
     covidProImage.setAttribute('text-align','center');  //center aligning not working for the image
     covidProImage.setAttribute('width','45%');
-    covidProImage.setAttribute('src','./images/progression-of-covid-19.webp');
+    covidProImage.setAttribute('src','./assets/images/progression-of-covid-19.webp');
     covidProImage.setAttribute('alt','');   // for proper coding form
     dateArea.appendChild(covidProImage);
     //source
     var covidProImageSource = document.createElement("p");
     covidProImageSource.textContent = "Source: CBC News";
     dateArea.appendChild(covidProImageSource);
+
+    //citation
+    var dataCitation = document.createElement('p');
+    dataCitation.innerHTML = "<b>The following data is cited from Boston 25 news website: </b>" +
+    "<a href='https://www.boston25news.com/news/trending/coronavirus-how-covid-19-progresses-day-by-day-breakdown-symptoms/YRC3CCK2NFD2THIYJHT35447AU/'>" +
+    "Link here.</a><br>" ;
+    dateArea.appendChild(dataCitation);
+
 
     var day1 = document.createElement("li");
     day1.setAttribute('list-style-type','none');       //NOT working
