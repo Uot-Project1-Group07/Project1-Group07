@@ -56,7 +56,11 @@ html, body {
 .btn-city {
     font-size: 1rem;
     text-align: left;
-    margin-bottom: 1rem;
+    margin-bottom: 1px;
+}
+#area-stats {
+  display: flex;
+  flex-direction: column;
 }
 
 

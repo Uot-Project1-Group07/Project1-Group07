@@ -163,20 +163,17 @@
 -->
                 <div class="covid-related-conatiner">
 
-<!--                  <a class="waves-effect waves-light btn btn-city green accent-4 z-depth-2">City Name: Toronto</a>
-                  <a class="waves-effect waves-light btn btn-city green accent-4 z-depth-2">New Cases</a>
-                  <a class="waves-effect waves-light btn btn-city green accent-4 z-depth-2">Resolved</a>
-                  <a class="waves-effect waves-light btn btn-city green accent-4 z-depth-2">Zone/Total Cases</a>
--->                
-                 <!-- <div id="canada-stats"> -->
+                
+                 <!-- Canada Stats Section -->
                     <p class="btn btn-city green accent-4 ">Positive Stats for Canada</p>
                     <p id="canada-recovered-new" class="btn btn-city">New Recoveries: <span id="CArecoverednew"></span></p>
                     <p id="canada-recovered" class="btn btn-city">Total Recovered: <span id="CArecovered"></span></p>
                     <p id="canada-vaccinated-new" class="btn btn-city">New Vaccinations: <span id="CAvaccinatednew"></span></p>
                     <p id="canada-vaccinated" class="btn btn-city">Total Vaccinated: <span id="CAvaccinated"></span></p>
-                  <!-- </div> -->
+                  
+                    <!-- Province Select-->
                   <div class="input-field">
-                    <select id="area-select" class="browser-default btn btn-city">
+                    <select id="area-select" class="btn btn-city green accent-4">
                       <option value="" disabled selected>Choose a Province</option>
                       <option value="AB">Alberta</option>
                       <option value="BC">British Columbia</option>
@@ -193,6 +190,7 @@
                       <option value="YT">Yukon</option>
                     </select>
                   </div>
+                  <!-- Div for stats to appear in after selection -->
                   <div id="area-stats">    
                   </div>
                 </div>
@@ -228,5 +226,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     
     <script src="./assets/js/script.js"></script>
+    <script src="assets/js/kris-script.js"></script>
 </body>
 </html>
