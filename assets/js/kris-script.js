@@ -57,26 +57,31 @@ var displayAreaData = function(data) {
   
   //create stat title element
   var areaTitleEl = document.createElement("h6");
+  areaTitleEl.classList.add("btn", "btn-city", "green", "accent-4");
   areaTitleEl.textContent = areaName + " Stats";
   areaStatsEl.appendChild(areaTitleEl);
 
   //create new recoveries element
   var newRecoveriesEl = document.createElement("p");
+  newRecoveriesEl.classList.add("btn", "btn-city");
   newRecoveriesEl.textContent = "New Recoveries: " + areaRecoveredNew;
   areaStatsEl.appendChild(newRecoveriesEl);
 
   //create total recoveries element
   var totalRecoveriesEl = document.createElement("p");
+  totalRecoveriesEl.classList.add("btn", "btn-city");
   totalRecoveriesEl.textContent = "Total Recovered: " + areaRecovered;
   areaStatsEl.appendChild(totalRecoveriesEl);
 
   //create new vaccinations element
   var newVaccinationsEl = document.createElement("p");
+  newVaccinationsEl.classList.add("btn", "btn-city");
   newVaccinationsEl.textContent = "New Vaccinations: " + areaVaccineNew;
   areaStatsEl.appendChild(newVaccinationsEl);
 
   //create total vaccinations element
   var totalVaccinationsEl = document.createElement("p");
+  totalVaccinationsEl.classList.add("btn", "btn-city");
   totalVaccinationsEl.textContent = "Total Vaccinations: " + areaVaccinated;
   areaStatsEl.appendChild(totalVaccinationsEl); 
 }
