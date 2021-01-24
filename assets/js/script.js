@@ -20,7 +20,7 @@ var dates = function (){
     var covidProImage = document.createElement("img");
     covidProImage.setAttribute('text-align','center');  //center aligning not working for the image
     covidProImage.setAttribute('width','45%');
-    covidProImage.setAttribute('src','./images/progression-of-covid-19.webp');
+    covidProImage.setAttribute('src','./assets/images/progression-of-covid-19.webp');
     covidProImage.setAttribute('alt','');   // for proper coding form
     dateArea.appendChild(covidProImage);
     //source
