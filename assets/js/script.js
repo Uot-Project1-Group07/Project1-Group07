@@ -56,7 +56,8 @@ var displayAreaData = function(data) {
   areaStatsEl.textContent = ""
   
   //create stat title element
-  var areaTitleEl = document.createElement("h6");
+  var areaTitleEl = document.createElement("p");
+  areaTitleEl.classList.add("btn btn-city green accent-4git checkout")
   areaTitleEl.textContent = areaName + " Stats";
   areaStatsEl.appendChild(areaTitleEl);
 
