@@ -165,6 +165,9 @@ html, body {
   }
 */
 
+
+/*** Start of Anagha's Joke API ***/
+
 .joke-sec {
     margin-top: 2rem;
     margin-bottom: 3rem;
@@ -229,7 +232,55 @@ html, body {
       
   #clickme:hover{
       background-color: rgb(207, 197, 173);
+      
    }
+
+   
+/*** End of Anagha's Joke API ***/
+
+
+
+/*** Start of Raj's Inspirational Quotes API ***/
+
+.title-inspo {
+    /*position: absolute;*/
+    /*margin-left: 50px;*/
+    top: 10px;
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  .container-inspo {
+    /* width: 60%;*/
+     /*max-width: 300px; */
+     height: auto;
+     border-radius: 8px;
+     /*border :0.3rem solid orange;*/
+     padding: 1rem;
+     display: flex;
+     flex-direction: column;
+   }
+   .container-inspo p {
+ 
+     font-size: 1.32rem;
+     line-height: 2rem;
+     text-align: left;
+     color:white;
+     font-family: "Montserrat";
+   }
+
+   #inspo-refresh
+   {
+     
+       align-self: flex-end;
+    
+       }
+
+
+
+  /*** End of Raj's Inspirational Quotes API ***/
+
 
 
 
