@@ -296,6 +296,11 @@ html, body {
   /* This will be applied on any screen smaller than 768px */
 @media screen and (max-width: 768px) {
 
+    .covid-related-conatiner {
+        margin-top: 1.5rem;
+    }
+
+
     .btn-city {
         margin-top: 5px;
         margin-bottom: 5px;
@@ -309,6 +314,22 @@ html, body {
     /* This will be applied on any screen smaller than 378px */
 @media screen and (max-width: 378px) {
 
+    nav .brand-logo {
+
+        font-size: 1.5rem;
+    
+    
+    }
+
+    .left-column {
+        margin-top: .0px;
+    }
+    
+
+    .covid-related-conatiner {
+        margin-top: 1.5rem;
+    }
+
     .btn-city {
         margin-top: 5px;
         margin-bottom: 5px;
@@ -318,8 +339,4 @@ html, body {
     }
   
   }
-
-
-
-
 
