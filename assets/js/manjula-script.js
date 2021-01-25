@@ -4,40 +4,41 @@ var dateArea = document.querySelector("#dates_info");  //ul element
 
 const input = document.querySelector('input');  //date picker element
 
-var log = []; //to get and use the date
+var daySelected; //to get and use the date
+//creating 
 
-
-var dates = function (){
-    //passing the date so we can generate the dates according to the date given
-
-    /*
-    var dates = function(){
+var genDatesFromGiven = function(){
+  
+  //passing the date so we can generate the dates according to the date given
 
   var daySplit = (daySelected.split('-'));
-  console.log(daySplit);
+  //console.log(daySplit);
 
   var d = new Date(parseInt(daySplit[0]), parseInt(daySplit[1])-1, parseInt(daySplit[2])); 
-  console.log("Initial date: " + d);
-  console.log("To get the date: " + d.getDate());
+  //console.log("Initial date: " + d);
+  //console.log("To get the date: " + d.getDate());
 
   var finalDate = new Date(d);
 
   var datesArray = [];
 
-  for(var i=1; i<= 18; i++){    //starting in 1
+  for(var i=0; i<= 17; i++){    //starting in 1
     datesArray[i] = new Date(daySplit[0], daySplit[1]-1, finalDate.getDate() + i);
   }
 
   return datesArray;
 };
 
-*/
-    console.log(log.length);
-    console.log(log);
+
+var dates = function (){
+
+    var arrDates = genDatesFromGiven();
+    console.log(arrDates);
+    console.log(arrDates[1].toDateString());
 
     var givenDate = document.createElement('h4');
     givenDate.setAttribute('text-align','right');
-    givenDate.innerHTML = "<h4 style='text-align:center'>Covid contracted date you gave was <b>"+log+"</b></h4><hr><br>";
+    givenDate.innerHTML = "<h4 style='text-align:center'>Covid contracted date you gave was <b>"+arrDates[0].toDateString()+"</b></h4><hr><br>";
     dateArea.appendChild(givenDate);
 
     //can I make an image pop out
@@ -62,62 +63,62 @@ var dates = function (){
 
     var day1 = document.createElement("li");
     day1.setAttribute('list-style-type','none');       //NOT working
-    day1.innerHTML = "<h5><b>"+ "Day 1"+ "</b></h5>" + "<h5p>" +
+    day1.innerHTML = "<h5><b>"+ arrDates[0].toDateString()+ "</b></h5>" + "<h5p>" +
         "Most of those infected – 88% – will have a fever and feel tired. Many also have muscle pain and a dry cough." + "</p>" +
         "<p>Some people, around 10% according to the study from China, experience nausea or have diarrhea in the days just before the fever begins.</p>";
     dateArea.appendChild(day1);
 
     var day2to4 = document.createElement("li");
     day2to4.setAttribute('list-style-type','none');        //NOT working
-    day2to4.innerHTML = "<h5><b>"+ "Day 2-4"+ "</b></h5>" +   
+    day2to4.innerHTML = "<h5><b>"+ arrDates[1].toDateString() + " to " + arrDates[3].toDateString()+ "</b></h5>" +   
     "<p>The average duration of fever was 12 days. Ninety-nine percent of the patients studied had a fever. About 50% felt fatigued and had a dry cough, with 33% having difficulty breathing and complaining of muscle pain.</p>";
     dateArea.appendChild(day2to4);    
     
     var day5 = document.createElement("li");
     day5.setAttribute('list-style-type','none');       //NOT working
-    day5.innerHTML = "<h5><b>"+ "Day 5"+ "</b></h5>" + 
+    day5.innerHTML = "<h5><b>"+ arrDates[4].toDateString()+ "</b></h5>" + 
     "<p>The average duration of fever was 12 days. Ninety-nine percent of the patients studied had a fever. About 50% felt fatigued and had a dry cough, with 33% having difficulty breathing and complaining of muscle pain.</p>";
     dateArea.appendChild(day5);
 
     var day6 = document.createElement("li");
     day6.setAttribute('list-style-type','none');       //NOT working
-    day6.innerHTML = "<h5><b>"+ "Day 6"+ "</b></h5>" + 
+    day6.innerHTML = "<h5><b>"+ arrDates[5].toDateString()+ "</b></h5>" + 
     "<p>Breathing difficulty, cough and fever persist. Some people describe chest tightening or having a feeling that a “band” is around their chest.</p>";
     dateArea.appendChild(day6);
 
     var day7 = document.createElement("li");
     day7.setAttribute('list-style-type','none');       //NOT working
-    day7.innerHTML = "<h5><b>"+ "Day 7"+ "</b></h5>" + 
+    day7.innerHTML = "<h5><b>"+ arrDates[6].toDateString()+ "</b></h5>" + 
     "<p>Breathing difficulty, cough and fever persist. Some people describe chest tightening or having a feeling that a “band” is around their chest.</p>";
     dateArea.appendChild(day7);
 
     var day8 = document.createElement("li");
     day8.setAttribute('list-style-type','none');       //NOT working
-    day8.innerHTML = "<h5><b>"+ "Day 8"+ "</b></h5>" + 
+    day8.innerHTML = "<h5><b>"+ arrDates[7].toDateString()+ "</b></h5>" + 
     "<p>Breathing difficulty, cough and fever persist. Some people describe chest tightening or having a feeling that a “band” is around their chest.</p>";
     dateArea.appendChild(day8);
 
     var day10 = document.createElement("li");
     day10.setAttribute('list-style-type','none');       //NOT working
-    day10.innerHTML = "<h5><b>"+ "Day 10"+ "</b></h5>" + 
+    day10.innerHTML = "<h5><b>"+ arrDates[9].toDateString()+ "</b></h5>" + 
     "<p>Breathing difficulty, cough and fever persist. Some people describe chest tightening or having a feeling that a “band” is around their chest.</p>";
     dateArea.appendChild(day10);
 
     var day12 = document.createElement("li");
     day12.setAttribute('list-style-type','none');       //NOT working
-    day12.innerHTML = "<h5><b>"+ "Day 12"+ "</b></h5>" + 
+    day12.innerHTML = "<h5><b>"+ arrDates[11].toDateString()+ "</b></h5>" + 
     "<p>Breathing difficulty, cough and fever persist. Some people describe chest tightening or having a feeling that a “band” is around their chest.</p>";
     dateArea.appendChild(day12);
 
     var day13to14 = document.createElement("li");
     day13to14.setAttribute('list-style-type','none');       //NOT working
-    day13to14.innerHTML = "<h5><b>"+ "Day 13 to 14"+ "</b></h5>" + 
+    day13to14.innerHTML = "<h5><b>"+ arrDates[12].toDateString() + " to " + arrDates[13].toDateString() + "</b></h5>" + 
     "<p>Breathing difficulty, cough and fever persist. Some people describe chest tightening or having a feeling that a “band” is around their chest.</p>";
     dateArea.appendChild(day13to14);
 
     var day18 = document.createElement("li");
     day18.setAttribute('list-style-type','none');       //NOT working
-    day18.innerHTML = "<h5><b>"+ "Day 18"+ "</b></h5>" + 
+    day18.innerHTML = "<h5><b>"+ arrDates[17].toDateString() + "</b></h5>" + 
     "<p>Breathing difficulty, cough and fever persist. Some people describe chest tightening or having a feeling that a “band” is around their chest.</p>";
     dateArea.appendChild(day18);
 };
@@ -127,7 +128,7 @@ var instructions = document.querySelector('#dateInstructions');
 
 var datePicker = function(e){
     
-    log = e.target.value;
+    daySelected = e.target.value;
     
     dates();
 
