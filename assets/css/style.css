@@ -54,11 +54,18 @@ html, body {
 }
 
 .btn-city {
+    margin-top: 5px;
+    margin-bottom: 5px;
     font-size: 1rem;
     text-align: left;
-    margin-bottom: 1rem;
+    /*margin-bottom: 1rem;*/
 }
 
+#area-stats {
+    display: flex;
+    flex-direction: column;
+
+}
 
 .btn-more {
     font-size: 1rem;
@@ -280,6 +287,38 @@ html, body {
 
 
   /*** End of Raj's Inspirational Quotes API ***/
+
+
+
+
+
+
+  /* This will be applied on any screen smaller than 768px */
+@media screen and (max-width: 768px) {
+
+    .btn-city {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        font-size: .65rem;
+        text-align: left;
+        /*margin-bottom: 1rem;*/
+    }
+  
+  }
+
+    /* This will be applied on any screen smaller than 378px */
+@media screen and (max-width: 378px) {
+
+    .btn-city {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        font-size: 1rem;
+        text-align: left;
+        /*margin-bottom: 1rem;*/
+    }
+  
+  }
+
 
 
 
