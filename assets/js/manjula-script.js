@@ -53,7 +53,7 @@ var dates = function (){
     //citation
     var dataCitation = document.createElement('p');
     dataCitation.innerHTML = "<b>The following data is cited from Boston 25 news website: </b>" +
-    "<a href='https://www.boston25news.com/news/trending/coronavirus-how-covid-19-progresses-day-by-day-breakdown-symptoms/YRC3CCK2NFD2THIYJHT35447AU/'>" +
+    "<a href='https://www.boston25news.com/news/trending/coronavirus-how-covid-19-progresses-day-by-day-breakdown-symptoms/YRC3CCK2NFD2THIYJHT35447AU/' target='_blank'>" +
     "Link here.</a><br>" ;
     dateArea.appendChild(dataCitation);
 
