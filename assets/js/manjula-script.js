@@ -9,7 +9,31 @@ var log = []; //to get and use the date
 
 var dates = function (){
     //passing the date so we can generate the dates according to the date given
+
+    /*
+    var dates = function(){
+
+  var daySplit = (daySelected.split('-'));
+  console.log(daySplit);
+
+  var d = new Date(parseInt(daySplit[0]), parseInt(daySplit[1])-1, parseInt(daySplit[2])); 
+  console.log("Initial date: " + d);
+  console.log("To get the date: " + d.getDate());
+
+  var finalDate = new Date(d);
+
+  var datesArray = [];
+
+  for(var i=1; i<= 18; i++){    //starting in 1
+    datesArray[i] = new Date(daySplit[0], daySplit[1]-1, finalDate.getDate() + i);
+  }
+
+  return datesArray;
+};
+
+*/
     console.log(log.length);
+    console.log(log);
 
     var givenDate = document.createElement('h4');
     givenDate.setAttribute('text-align','right');
