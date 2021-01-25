@@ -1,3 +1,15 @@
+
+
+$(document).ready(function(){// *** jQuery *** //
+
+    
+    $('.sidenav').sidenav();
+
+    
+
+});
+
+
 // *** Links to videos *** //
 
 let videosContainerEl = document.querySelector("#test123")

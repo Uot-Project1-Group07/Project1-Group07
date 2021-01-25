@@ -4,6 +4,13 @@ html, body {
     height: 100%;
   }
 
+.container-width {
+    width: 90%;
+    max-width: none;
+
+}
+
+
 .fas {
     background-color: coral;
 }
@@ -311,8 +318,25 @@ html, body {
   
   }
 
+@media only screen and (min-width: 601px) {
+    .container-width {
+        width: 100%;
+        max-width: none;
+    
+    }
+    
+}
+
+
     /* This will be applied on any screen smaller than 378px */
 @media screen and (max-width: 378px) {
+
+    .container-width {
+        width: 100%;
+        max-width: none;
+    
+    }
+    
 
     nav .brand-logo {
 
