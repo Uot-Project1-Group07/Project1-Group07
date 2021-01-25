@@ -10,19 +10,16 @@ var daySelected; //to get and use the date
 var genDatesFromGiven = function(){
   
   //passing the date so we can generate the dates according to the date given
-
   var daySplit = (daySelected.split('-'));
-  //console.log(daySplit);
 
+  //get int value ranges
   var d = new Date(parseInt(daySplit[0]), parseInt(daySplit[1])-1, parseInt(daySplit[2])); 
-  //console.log("Initial date: " + d);
-  //console.log("To get the date: " + d.getDate());
 
   var finalDate = new Date(d);
 
   var datesArray = [];
 
-  for(var i=0; i<= 17; i++){    //starting in 1
+  for(var i=0; i<= 17; i++){    //only upto 17 because 0 is involved
     datesArray[i] = new Date(daySplit[0], daySplit[1]-1, finalDate.getDate() + i);
   }
 
@@ -32,10 +29,10 @@ var genDatesFromGiven = function(){
 
 var dates = function (){
 
+    //All the generated dates are passed here
     var arrDates = genDatesFromGiven();
-    console.log(arrDates);
-    console.log(arrDates[1].toDateString());
 
+    //reprase the selected date and show 
     var givenDate = document.createElement('h4');
     givenDate.setAttribute('text-align','right');
     givenDate.innerHTML = "<h4 style='text-align:center'>Covid contracted date you gave was <b>"+arrDates[0].toDateString()+"</b></h4><hr><br>";
@@ -60,6 +57,7 @@ var dates = function (){
     "Link here.</a><br>" ;
     dateArea.appendChild(dataCitation);
 
+    //Generating dates and day's possible symptom description
 
     var day1 = document.createElement("li");
     day1.setAttribute('list-style-type','none');       //NOT working
@@ -128,8 +126,10 @@ var instructions = document.querySelector('#dateInstructions');
 
 var datePicker = function(e){
     
-    daySelected = e.target.value;
-    
+    //get date picked bu the user
+    daySelected = e.target.value;    
+
+    //gen date and discription
     dates();
 
     //removing items used to get the date from the user
@@ -153,7 +153,6 @@ var commentor = function (e){
   
   var comment = document.createElement('li');
   comment.className = "collection-item";
-  var random = Math.random();   //for testing only
   comment.innerHTML = "<div class='card'> <span class='card-title'>"+ user.value +
   "</span> <div class='card-content'>" + userComment.value + "</div></div>";
   commentArea.prepend(comment);  //to add to the top
@@ -185,5 +184,7 @@ var commentor = function (e){
   });
 //******************************/
 
+//Triggers when the user selects a date
 input.addEventListener('input', datePicker);
+//Triggers when user submits a comment
 submit.addEventListener('click',commentor);
