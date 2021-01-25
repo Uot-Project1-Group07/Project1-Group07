@@ -16,13 +16,13 @@ var videoClicked = function(event) {
         case "inspirational":
            // window.open("https://www.youtube.com/watch?v=qWtdWXpmlKs", '_blank');
            // Simulate a mouse click:
-            window.location.href = "https://www.youtube.com/watch?v=qWtdWXpmlKs";
+          //  window.location.href = "https://www.youtube.com/watch?v=qWtdWXpmlKs";
+            window.open("https://www.youtube.com/watch?v=qWtdWXpmlKs");
             break;
-
         case "how germs spread":
-            window.location.href = "https://www.youtube.com/watch?v=JD85FDlxqCs";
+            //window.location.href = "https://www.youtube.com/watch?v=JD85FDlxqCs";
+            window.open("https://www.youtube.com/watch?v=JD85FDlxqCs");
             break;
-
         case "keep it clean":
             window.location.href = "https://www.youtube.com/watch?v=5JYhm9oa-DM";
             break;
