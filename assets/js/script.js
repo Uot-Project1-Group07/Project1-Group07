@@ -1,68 +1,46 @@
+// *** Links to videos *** //
+
+let videosContainerEl = document.querySelector("#test123")
 
 
-$(document).ready(function() { // Wait for the DOM to be ready for window., javascript/jquery and others
+var videoClicked = function(event) {
 
-    // Menu example
+    event.preventDefault();
+    var videoLinkSelected = videosContainerEl.value;
+    //var videoLinkSelected = videosContainerEl.innerHTML;
 
-    $(document).ready(function(){
-        $('.sidenav').sidenav();
-      });
-        
-      
-
-
-
-        alert(
-        $('#select')
-        .dropdown('get value')
-        );
-
-let citiesContainerEl = document.querySelector("#test123")
-
-console.log("container EL Found " + citiesContainerEl)
-  
-
-// Funciton to handle the event from the list of cities when clicked.
-var cityClicked = function (event) {
-
-    let citySelectredDropDownEl = 
-    $('#select')
-    .dropdown('get value')
-
-    if (citySelectredDropDownEl == "Gender") {
+    if (!videoLinkSelected) {
         // Do nothing
     } else {
+    switch (videoLinkSelected) {
+        case "inspirational":
+           // window.open("https://www.youtube.com/watch?v=qWtdWXpmlKs", '_blank');
+           // Simulate a mouse click:
+            window.location.href = "https://www.youtube.com/watch?v=qWtdWXpmlKs";
+            break;
 
-    alert(citySelectredDropDownEl);
+        case "how germs spread":
+            window.location.href = "https://www.youtube.com/watch?v=JD85FDlxqCs";
+            break;
 
-    $('#select')
-    .dropdown('restore defaults')
-
-    $('#select')
-    .dropdown('clear')
-   
-    }
-
-    //let cityClicked = event.target.getAttribute("data-city")
-    // if (cityClicked){
-    //     //getWeatherData(event, cityClicked);
-    //     alert(cityClicked)
-    // } else { // If the value is empty, it should not happen but it is a failsafe.
-    //     alert(cityClicked)
-    //     alert("Internal erro found, please email esroleo@gmail.com.\nPlease provide story of issue in order for it to be fixed");
-    // };
-};
-
-
-
-// Event listener for the cities incase they are clicked.
-//citiesListContainerEl.addEventListener("click",  cityClicked);
-citiesContainerEl.addEventListener("click", cityClicked)
+        case "keep it clean":
+            window.location.href = "https://www.youtube.com/watch?v=5JYhm9oa-DM";
+            break;
+        case "quarantine":
+            window.location.href = "https://www.youtube.com/watch?v=fqRh6wscMMI";
+            break;
+        case "funny":
+            window.location.href = "https://www.youtube.com/watch?v=DODLEX4zzLQ";
+            break;
+          }
+        }
+    
+}
 
 
+videosContainerEl.addEventListener("change", videoClicked);
 
 
-});
 // var instance = M.FormSelect.getInstance(elem);
 
 // instance.getSelectedValues();
