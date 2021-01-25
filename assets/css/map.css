@@ -1,0 +1,28 @@
+.grocery-sec {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+  }
+
+.title-grocery {
+    top: 10px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    color:white;
+}
+
+.container-grocery {
+     height: auto;
+     border-radius: 8px;
+     padding: 1rem;
+     display: flex;
+     flex-direction: column;
+}
+
+.container-grocery p { 
+     font-size: 1.32rem;
+     line-height: 2rem;
+     text-align: left;
+     color:white;
+     font-family: "Montserrat";
+}
