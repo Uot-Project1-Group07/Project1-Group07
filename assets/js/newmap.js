@@ -2,7 +2,7 @@
 //get nearby grocery stores
 function getstores(lat,lon)
   {
-    var groceryapirl = "https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location="+lat+","+lon+"&radius=500&type=supermarket&key=AIzaSyDs--vVtRh3_b44YkAcNtzhQ_BrgJdpat4";
+    var groceryapirl = "https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location="+lat+","+lon+"&radius=5000&type=supermarket&key=AIzaSyDs--vVtRh3_b44YkAcNtzhQ_BrgJdpat4";
     fetch(groceryapirl).then(function(response) 
     {
       if (response.ok) {
