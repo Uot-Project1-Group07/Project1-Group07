@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/login.css" />
+    <title>Log in</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="nav-wrapper">
+          <a class="brand-logo center">Welcome to Covid Posi+ivity</a>
+        </div>
+      </nav>
+
+      <p>
+        Please use your Government issued ID to login and gain access to our
+        resources and connect with other individuals on the same journey!
+      </p>
+    </header>
+
+    <div id="id01" class="login-form">
+      <!-- Form Content -->
+      <form class="modal-content animate" id="login-form">
+        <div class="form-container">
+          <h2 class="login-title">Login</h2>
+          <div>
+            <input
+              id="userId"
+              type="text"
+              placeholder="Enter ID"
+              name="uname"
+              required
+            />
+          </div>
+          <div>
+            <input
+              id="userPswd"
+              type="password"
+              placeholder="Enter Password"
+              name="psw"
+              required
+            />
+          </div>
+
+          <button class="waves-effect waves-light sign-in-btn" type="submit">
+            Sign in
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <script src="./assets/js/login.js"></script>
+  </body>
+</html>
