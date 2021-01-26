@@ -1,3 +1,7 @@
+input  {
+  color: white;
+}
+
 h2,
 p {
   text-align: center;
@@ -9,17 +13,18 @@ p {
 .modal-content {
   background-color: #006ff7;
   color: white;
-  width: 35%;
+  width: 65%;
   margin: 50px auto;
   border-radius: 12px;
   box-shadow: 8px 8px grey;
 }
 
 .login-form {
-  margin: 50px auto;
+  /*margin: 50px auto;*/
 }
 
 .form-container {
+
   padding: 10px;
 }
 
@@ -55,3 +60,16 @@ p {
 input {
   padding: 10px;
 }
+
+@media screen and (max-width: 798px) {
+
+    .modal-content {
+
+      width: 85%;
+      margin: 25px auto;
+      border-radius: 6px;
+      box-shadow: 4px 4px grey;
+    }
+
+}
+

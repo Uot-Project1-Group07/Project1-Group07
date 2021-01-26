@@ -30,7 +30,7 @@ var formLoginHandler = function (event) {
   // optional hide form after login
   loginForm.style.display = "none";
   //redirect to main page *****Conf path correct******
-  window.location = ".index.html";
+  window.location = "./index.html";
 };
 
 userFormEl.addEventListener("submit", formLoginHandler);
