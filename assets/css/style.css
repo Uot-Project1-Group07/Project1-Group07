@@ -20,6 +20,8 @@ iframe {
 }
 
 
+
+
 .fas {
     background-color: coral;
 }
@@ -57,6 +59,16 @@ iframe {
     display: flex;
     flex-wrap: nowrap;
     
+}
+
+
+.card-panel-chat {
+    padding: 5px;
+}
+
+
+.text-align-left {
+    text-align: left;
 }
 .dropdown-trigger {
     margin-bottom: 5px;
