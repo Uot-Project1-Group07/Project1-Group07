@@ -122,9 +122,30 @@
 
                 <!-- Place holder for Google Map API-->
 
-                <div class="container"> 
-                  <img class="google-img" src="assets/images/map-sample.JPG">
-                </div>
+                
+
+               <!--  <div class="container"> -->
+                  <!--Grocery stores start-->
+
+      
+                  
+                      <iframe
+                      id="map"
+
+                      frameborder="0" style="border:0"
+                      src="" allowfullscreen>
+                    </iframe>
+               
+             
+                  <section class="grocery-sec green accent-4">
+                    <h1 class="title-grocery">Nearby grocery stores</h1>
+                    <div id="stores" class="container-grocery">
+                      <p class="store1 title-text"></p>
+                      <p class="store2 title-text"></p>
+                    </div>
+                  </section>
+                                <!--   <img class="google-img" src="assets/images/map-sample.JPG"> -->
+                <!--   </div> -->
 
                 
                 <!-- End of  affiliations container -->
@@ -219,19 +240,13 @@
 
             </div>
 
-            
-
-
          </div>
 
-        
-        
+    
       </div>
 
       
-       
-
-
+      
 
     </div>
 
@@ -239,8 +254,13 @@
 
     <!-- JQuery -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!-- Jquery Google Maps -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?Libraries=places&key=AIzaSyDs--vVtRh3_b44YkAcNtzhQ_BrgJdpat4" async defer></script>
     <!-- Compiled and minified JavaScript Materialize -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    
+    
     
     <script src="./assets/js/script.js"></script>
 </body>

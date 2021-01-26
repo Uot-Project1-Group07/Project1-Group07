@@ -4,6 +4,15 @@ html, body {
     height: 100%;
   }
 
+iframe {
+ 
+    width: 100%;
+    position: relative;
+  
+    
+
+}
+
 .container-width {
     width: 90%;
     max-width: none;
@@ -36,8 +45,7 @@ html, body {
     border-bottom-right-radius: 30px 30px;
     background-size: cover; /* Image will cover the background */
     background-position:  100% 13%; /* Aligned the image to show the top of the tower*/
-   
-  }
+}
 
 
 
@@ -295,6 +303,39 @@ html, body {
 
   /*** End of Raj's Inspirational Quotes API ***/
 
+
+/*** Alexis/Anagha Google Map API CSS ***/
+
+.grocery-sec {
+    /*margin-top: 2rem;*/
+    /*margin-bottom: 3rem;*/
+  }
+
+.title-grocery {
+    top: 10px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    color:white;
+}
+
+.container-grocery {
+     height: auto;
+     border-radius: 8px;
+     padding: 1rem;
+     display: flex;
+     flex-direction: column;
+}
+
+.container-grocery p { 
+     font-size: 1.32rem;
+     line-height: 2rem;
+     text-align: left;
+     color:white;
+     /*font-family: "Montserrat"'*/
+}
+
+/*** End Alexis/Anagha Google Map API CSS ***/
 
 
 
