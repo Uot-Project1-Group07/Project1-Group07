@@ -13,25 +13,23 @@
 <body>
 
 
-    <nav>
-        <div class="nav-wrapper green accent-4">
-          <a href="#" class="brand-logo center">Covid Posi <span class="fas fa-plus"></span> ivity</a>
-          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">Menu</i></a>
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a class="nav-links waves-effect waves-light" href="#">Log in</a></li>
-            <li><a class="nav-links waves-effect waves-light" href="#">Personal Care</a></li>
-          </ul>
-        </div>
-      </nav>
+  <nav>
+    <div class="nav-wrapper green accent-4">
+      <a href="#" class="brand-logo center">Covid Posi <span class="fas fa-plus"></span> ivity</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">Menu</i></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a class="nav-links waves-effect waves-light" href="./login.html">Log in</a></li>
+        <li><a class="nav-links waves-effect waves-light" href="./info.html">Personal Care</a></li>
+      </ul>
+    </div>
+  </nav>
 
-      <ul class="sidenav" id="mobile-demo">
-        <li><a class="nav-links waves-effect waves-light" href="#">Log in</a></li>
-        <li><a class="nav-links waves-effect waves-light" href="#">Personal Care</a></li>
-      </ul> 
+  <ul class="sidenav" id="mobile-demo">
+    <li><a class="nav-links waves-effect waves-light" href="#">Log in</a></li>
+    <li><a class="nav-links waves-effect waves-light" href="./info.html">Personal Care</a></li>
+  </ul> 
 
 
-
-    
 
       <div class="container title-text">
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati error alias, dolore asperiores laudantium deserunt voluptatem nulla distinctio repellat earum provident voluptate, sunt, id velit rem facilis quia facere recusandae ipsam quam. Perspiciatis, aperiam. Accusantium laboriosam sunt aut saepe praesentium soluta necessitatibus illum atque. Provident repellat officiis nesciunt iste accusantium?
@@ -43,11 +41,8 @@
 
      <div class="col s12 m8"> <!-- Shadow Grid -->
       <div class="card-panel grey lighten-4 z-depth-4"> <!-- One big card-->
-
-          
+         
         <!-- Flex Contatiner -->
-
-
      
           <div class="row">
             <div class="col s12 m3 left-column">
@@ -56,26 +51,33 @@
 
               <div class="covid-related-conatiner">
 
+                <div class="ui divider"></div>
 
-
-              <!-- Dropdown Trigger -->
-              <a class='dropdown-trigger waves-effect waves-light btn btn-links yellow darken-3 z-depth-2' href='#' data-target='dropdown1'>Joke/Inspo quote</a>
-              <!-- Dropdown Structure -->
-              <ul id='dropdown1' class='dropdown-content'>
-                <li><a href="#!">one</a></li>
-                <li><a href="#!">two</a></li>
-              </ul>
-
-              <!-- Dropdown Trigger -->
-              <a class='dropdown-trigger waves-effect waves-light btn btn-links yellow darken-3 z-depth-2'  href='#' data-target='dropdown2'>Link to videos</a>
+                    <!-- Dropdown Trigger -->
+              <a class='dropdown-trigger waves-effect waves-light btn btn-links yellow darken-3 z-depth-2'  href='#' target="_blank" data-target='dropdown2'>Link to videos</a>
               <!-- Dropdown Structure -->
               <ul id='dropdown2' class='dropdown-content'>
                 <li><a href="#!">one</a></li>
                 <li><a href="#!">two</a></li>
               </ul>
+             
+
+              <div class="test123">
+                <select id="test123" class="btn btn-city green accent-4">
+                  <option value="" disabled selected>Choose a Video</option>
+                  <option value="inspirational">Inspirational</option>
+                  <option value="how germs spread">How germs spread</option>
+                  <option value="keep it clean">Keep it clean</option>
+                  <option value="quarantine">Quarantine</option>
+                  <option value="funny">Funny Videos Compilation</option>
+   
+                </select>
+              </div>
+
+              <div class="ui divider"></div>
 
               <!-- Dropdown Trigger -->
-              <a class='dropdown-trigger waves-effect waves-light btn btn-links yellow darken-3 z-depth-2' href='#' data-target='dropdown2'>Links to information</a>
+              <a class='dropdown-trigger waves-effect waves-light btn btn-links yellow darken-3 z-depth-2' href="./info.html" target="_blank" data-target='dropdown2'>Links to information</a>
               <!-- Dropdown Structure -->
               <ul id='dropdown2' class='dropdown-content'>
                 <li><a href="#!">one</a></li>
@@ -92,7 +94,7 @@
               <div class="affiliations-related-containter ">
 
                 <!-- Dropdown Trigger -->
-                <a class='dropdown-trigger waves-effect waves-light btn btn-links light-blue darken-3 z-depth-2' href='#' data-target='dropdown1'>Shopify</a>
+                <a class='dropdown-trigger waves-effect waves-light btn btn-links light-blue darken-3 z-depth-2' href='https://www.shopify.ca/' target="_blank" data-target='dropdown1'>Shopify</a>
                 <!-- Dropdown Structure -->
                 <ul id='dropdown1' class='dropdown-content'>
                   <li><a href="#!">one</a></li>
@@ -100,7 +102,7 @@
                 </ul>
   
                 <!-- Dropdown Trigger -->
-                <a class='dropdown-trigger waves-effect waves-light btn btn-links light-blue darken-3 z-depth-2'  href='#' data-target='dropdown2'>Instacart</a>
+                <a class='dropdown-trigger waves-effect waves-light btn btn-links light-blue darken-3 z-depth-2'  href='https://www.instacart.ca/' target="_blank" data-target='dropdown2'>Instacart</a>
                 <!-- Dropdown Structure -->
                 <ul id='dropdown2' class='dropdown-content'>
                   <li><a href="#!">one</a></li>
@@ -108,7 +110,7 @@
                 </ul>
   
                 <!-- Dropdown Trigger -->
-                <a class='dropdown-trigger waves-effect waves-light btn btn-links light-blue darken-3 z-depth-2' href='#' data-target='dropdown2'>Grocery Stores</a>
+                <a class='dropdown-trigger waves-effect waves-light btn btn-links light-blue darken-3 z-depth-2' href='#' target="_blank" data-target='dropdown2'>Grocery Stores</a>
                 <!-- Dropdown Structure -->
                 <ul id='dropdown2' class='dropdown-content'>
                   <li><a href="#!">one</a></li>
@@ -116,6 +118,35 @@
                 </ul>
   
                 </div>
+
+                <!-- Place holder for Google Map API-->
+
+                
+
+               <!--  <div class="container"> -->
+                  <!--Grocery stores start-->
+
+      
+                  
+                      <iframe
+                      id="map"
+
+                      frameborder="0" style="border:0"
+                      src="" allowfullscreen>
+                    </iframe>
+               
+             
+                  <section class="grocery-sec green accent-4">
+                    <h1 class="title-grocery">Nearby grocery stores</h1>
+                    <div id="stores" class="container-grocery">
+                      <p class="store1 title-text"></p>
+                      <p class="store2 title-text"></p>
+                    </div>
+                  </section>
+                                <!--   <img class="google-img" src="assets/images/map-sample.JPG"> -->
+                <!--   </div> -->
+
+                
                 <!-- End of  affiliations container -->
            
           
@@ -129,10 +160,7 @@
 
         
               <p class="middle-column">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum nostrum, ipsam est officiis cupiditate natus quos perspiciatis, expedita sunt ullam asperiores consequatur officia nam. Laudantium debitis, non totam deleniti quia exercitationem, fugit corrupti suscipit, minus temporibus cum ex distinctio sint reiciendis sunt eos quisquam nam magnam asperiores laborum necessitatibus assumenda? Voluptates ea quisquam necessitatibus eum optio recusandae cum voluptatum nobis!</p>
-              <div class="container"> 
-                <img class="google-img" src="assets/images/map-sample.JPG">
-              </div>
-
+           
                 <!--Joke section start-->
               <section class="joke-sec">
                 <h1 class="title-joke"><span style="font-size:20px">&#128515</span>Just for laughs!!!<span style="font-size:20px">&#128515</span></h1>
@@ -141,12 +169,69 @@
                     <p class="joke title-text"></p> <!-- Title text helps with responsivness as part of materialize UI-->
                   </div>
                 <button type="button" id ="clickme" class="waves-effect waves-light btn btn-joke light-blue darken-3 z-depth-2">More Jokes</button>
-      
-
-                         
+                          
                 </div>
               </section>
             <!--Joke section ends-->
+
+                <!--Inspo Quotes-->
+            <section class="inspo-sec ">
+              <h1 class="title-inspo"><span style="font-size:20px">&#128515</span>Food for thought!!!<span style="font-size:20px">&#128515</span></h1>
+              <div class="container-inspo green accent-4">
+                <div>
+                  <p id="quote-display" class="title-text"></p>
+                  <p><span id="author-display" class="title-text"></span></p>
+                </div>
+                <button type="button" id="inspo-refresh"  class="waves-effect waves-light btn btn-joke light-blue darken-3 z-depth-2">
+                  Click for Inspiration!
+                </button>
+              </div>
+            </section>
+
+            <!-- Start of Chat window -->
+
+            <div class="card teal lighten-2 ">
+              <div class="card-content white-text">
+                <span class="card-title left-align">Chat box</span>
+                         
+                  <div class="card-panel card-panel-chat grey lighten-5 z-depth-1">
+                    <div class="row valign-wrapper">
+                      <div class="col s2">
+                        <img src="./assets/images/rabbit.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+                      </div>
+                      <div class="col s12">
+                        <span class="black-text">
+                          Hello
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+              
+
+                  <div class="card-panel card-panel-chat grey lighten-5 z-depth-1">
+                    <div class="row valign-wrapper">
+                      <div class="col s2">
+                        <img src="./assets/images/carrot.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+                      </div>
+                      <div class="col s12">
+                        <span class="black-text text-align-left">
+                          Good Morning
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+
+              </div>
+              <div class="card-action ">
+                  <div class="input-field col s12">
+                      <input id="last_name" type="text" class="validate white-text">
+                  </div>           
+                  <a class="waves-effect green accent-4 btn-flat left-align white-text">Send</a>            
+              </div>
+            </div>
+
+          <!-- End of Chat window -->
                       
        
            
@@ -155,76 +240,69 @@
           <!-- End column container -->
 
            <!-- Right Column -->
-              <div class="col s12 m3">
-                <!-- Serach bar -->
+           <div class="col s12 m3">
+            <!-- Serach bar -->
 <!--
-                <input id="city-name" type="text" autofocus="true" placeholder="Search for city" class="form-input">
+            <input id="city-name" type="text" autofocus="true" placeholder="Search for city" class="form-input">
 -->
-                <div class="covid-related-conatiner">
+            <div class="covid-related-conatiner">
 
-<!--                  <a class="waves-effect waves-light btn btn-city green accent-4 z-depth-2">City Name: Toronto</a>
-                  <a class="waves-effect waves-light btn btn-city green accent-4 z-depth-2">New Cases</a>
-                  <a class="waves-effect waves-light btn btn-city green accent-4 z-depth-2">Resolved</a>
-                  <a class="waves-effect waves-light btn btn-city green accent-4 z-depth-2">Zone/Total Cases</a>
--->                
-                 <!-- <div id="canada-stats"> -->
-                    <p class="btn btn-city green accent-4 ">Positive Stats for Canada</p>
-                    <p id="canada-recovered-new" class="btn btn-city">New Recoveries: <span id="CArecoverednew"></span></p>
-                    <p id="canada-recovered" class="btn btn-city">Total Recovered: <span id="CArecovered"></span></p>
-                    <p id="canada-vaccinated-new" class="btn btn-city">New Vaccinations: <span id="CAvaccinatednew"></span></p>
-                    <p id="canada-vaccinated" class="btn btn-city">Total Vaccinated: <span id="CAvaccinated"></span></p>
-                  <!-- </div> -->
-                  <div class="input-field">
-                    <select id="area-select" class="browser-default btn btn-city">
-                      <option value="" disabled selected>Choose a Province</option>
-                      <option value="AB">Alberta</option>
-                      <option value="BC">British Columbia</option>
-                      <option value="MB">Manitoba</option>
-                      <option value="NB">New Brunswick</option>
-                      <option value="NL">Newfoundland and Labrador</option>
-                      <option value="NT">Northwest Territories</option>
-                      <option value="NS">Nova Scotia</option>
-                      <option value="NU">Nunavut</option>
-                      <option value="ON">Ontario</option>
-                      <option value="PE">Prince Edward Island</option>
-                      <option value="QC">Quebec</option>
-                      <option value="SK">Saskatchewan</option>
-                      <option value="YT">Yukon</option>
-                    </select>
-                  </div>
-                  <div id="area-stats">    
-                  </div>
-                </div>
+            
+             <!-- Canada Stats Section -->
+                <p class="btn btn-city green accent-4 ">Positive Stats for Canada</p>
+                <p id="canada-recovered-new" class="btn btn-city">New Recoveries: <span id="CArecoverednew"></span></p>
+                <p id="canada-recovered" class="btn btn-city">Total Recovered: <span id="CArecovered"></span></p>
+                <p id="canada-vaccinated-new" class="btn btn-city">New Vaccinations: <span id="CAvaccinatednew"></span></p>
+                <p id="canada-vaccinated" class="btn btn-city">Total Vaccinated: <span id="CAvaccinated"></span></p>
+              
+                <!-- Province Select-->
+              <div class="input-field">
+                <select id="area-select" class="btn btn-city green accent-4">
+                  <option value="" disabled selected>Choose a Province</option>
+                  <option value="AB">Alberta</option>
+                  <option value="BC">British Columbia</option>
+                  <option value="MB">Manitoba</option>
+                  <option value="NB">New Brunswick</option>
+                  <option value="NL">Newfoundland and Labrador</option>
+                  <option value="NT">Northwest Territories</option>
+                  <option value="NS">Nova Scotia</option>
+                  <option value="NU">Nunavut</option>
+                  <option value="ON">Ontario</option>
+                  <option value="PE">Prince Edward Island</option>
+                  <option value="QC">Quebec</option>
+                  <option value="SK">Saskatchewan</option>
+                  <option value="YT">Yukon</option>
+                </select>
+              </div>
+              <!-- Div for stats to appear in after selection -->
+              <div id="area-stats">    
+              </div>
+            </div>
 
 
-                </div>
+            </div>
 
-                
+         </div>
 
     
-             </div>
+      </div>
 
-            
-            
-          </div>
+      
+      
 
-          
-           
-
-
-
-        </div>
-
-        
-     </div>
-
+    </div>
 
 
 
     <!-- JQuery -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!-- Jquery Google Maps -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?Libraries=places&key=AIzaSyDs--vVtRh3_b44YkAcNtzhQ_BrgJdpat4" async defer></script>
     <!-- Compiled and minified JavaScript Materialize -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    
+    
     
     <script src="./assets/js/script.js"></script>
 </body>
