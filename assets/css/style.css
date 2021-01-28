@@ -1,0 +1,419 @@
+/* Landing Section Skeleton */
+
+html, body {
+    height: 100%;
+  }
+
+iframe {
+ 
+    width: 100%;
+    position: relative;
+  
+    
+
+}
+
+.container-width {
+    width: 90%;
+    max-width: none;
+
+}
+
+
+
+
+.fas {
+    background-color: coral;
+}
+
+.title-text {
+    margin-top: 1rem;
+}
+
+.nav-links {
+    font-size: 1.5rem;
+   
+}
+
+.hero { /* Here section is a flex container */
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    height: 300px;
+    background-image: url("../images/vector-banner-with-the-group-of-happy-people.jpg");
+    border-top-left-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+    border-bottom-left-radius: 30px 30px; /* border-radious bottom sides with bottom border changed also*/
+    border-bottom-right-radius: 30px 30px;
+    background-size: cover; /* Image will cover the background */
+    background-position:  100% 13%; /* Aligned the image to show the top of the tower*/
+}
+
+
+
+.left-column {
+    margin-top: 12px;
+}
+
+.middle-column {
+    display: flex;
+    flex-wrap: nowrap;
+    
+}
+
+
+.card-panel-chat {
+    padding: 5px;
+}
+
+
+.text-align-left {
+    text-align: left;
+}
+.dropdown-trigger {
+    margin-bottom: 5px;
+}
+
+.btn-links {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.btn-city {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 1rem;
+    text-align: left;
+    /*margin-bottom: 1rem;*/
+}
+
+#area-stats {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.btn-more {
+    font-size: 1rem;
+    text-align: right;
+    margin-bottom: 1rem;
+}
+
+.links-related-container{
+    display: flex;
+    flex-direction: column
+}
+
+.divider {
+    margin-top: 1rem;
+    margin-bottom: 2rem; /*To account for the margin bottom at the covid related links of 1rem*/
+}
+
+.covid-related-conatiner {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.affiliations-related-containter {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.google-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+   
+}
+
+
+/* CSS Flex/Grid Footer non-semantic Code */
+.footer-wrapper { /* Flex container */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+
+  .footer-container { /* CSS Grid */
+    width: 80%;
+    display: grid;
+    /*create a 4X3 grid. */
+    grid-template-columns: 1fr repeat(3, 2fr); /* Create a 4X4 grid with the first column smaller than the others 3 */
+    grid-template-rows: repeat(3,2fr); /* 3 rows of slighty biger size as a test */
+    gap: 20px 20px; 
+  }
+
+  
+.footer-grid-item {
+    text-align: center;
+  }
+  
+  .footer-grid-item.contact-me {
+    font-size: 35px;
+    grid-row: 1 / span 3;
+    text-align: right;
+    padding-right: 10px;
+    align-self:center;
+   
+  }
+  
+  .footer-grid-item.phone{
+    font-size: 1.5rem;
+    grid-row: 2;
+    text-decoration: none;
+  }
+  
+  .footer-grid-item.email{
+    font-size: 1.5rem;
+    grid-row: 2;
+  }
+  
+  .footer-grid-item.git-hub{
+    font-size: 1.5rem;
+    grid-row: 2;
+  }
+
+
+  /* End of Landing Section Skeleton */
+
+
+  
+/*Joke section style*/
+
+/*
+  .joke-sec {
+    max-height: 70vh;
+    width: 80%;
+    padding: 100px 0;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    font-size: 10px;
+    margin-top: 100px;
+  }
+*/
+
+
+/*** Start of Anagha's Joke API ***/
+
+.joke-sec {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+  }
+
+
+  .title-joke {
+    /*position: absolute;*/
+    /*margin-left: 50px;*/
+    top: 10px;
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  
+  
+  .container-joke {
+   /* width: 60%;*/
+    /*max-width: 300px; */
+    height: auto;
+    border-radius: 8px;
+    /*border :0.3rem solid orange;*/
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .container-joke p {
+
+    font-size: 1.32rem;
+    line-height: 2rem;
+    text-align: left;
+    color:white;
+    font-family: "Montserrat";
+  }
+
+
+  
+  /*
+  #clickme
+  {
+      outline: none;
+      border: none;
+      align-self: flex-end;
+      margin-top: 10px;
+      padding: 5px 5px;
+      background: orange;
+      font-size: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 3px rgb(226, 174, 115);
+      cursor: pointer;
+      color: rgb(214, 29, 29);
+      }
+      */
+      #clickme
+      {
+        
+          align-self: flex-end;
+       
+          }
+          
+      
+  #clickme:hover{
+      background-color: rgb(207, 197, 173);
+      
+   }
+
+   
+/*** End of Anagha's Joke API ***/
+
+
+
+/*** Start of Raj's Inspirational Quotes API ***/
+
+.title-inspo {
+    /*position: absolute;*/
+    /*margin-left: 50px;*/
+    top: 10px;
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  .container-inspo {
+    /* width: 60%;*/
+     /*max-width: 300px; */
+     height: auto;
+     border-radius: 8px;
+     /*border :0.3rem solid orange;*/
+     padding: 1rem;
+     display: flex;
+     flex-direction: column;
+   }
+   .container-inspo p {
+ 
+     font-size: 1.32rem;
+     line-height: 2rem;
+     text-align: left;
+     color:white;
+     font-family: "Montserrat";
+   }
+
+   #inspo-refresh
+   {
+     
+       align-self: flex-end;
+    
+       }
+
+
+
+  /*** End of Raj's Inspirational Quotes API ***/
+
+
+/*** Alexis/Anagha Google Map API CSS ***/
+
+.grocery-sec {
+    /*margin-top: 2rem;*/
+    /*margin-bottom: 3rem;*/
+  }
+
+.title-grocery {
+    top: 10px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    color:white;
+}
+
+.container-grocery {
+     height: auto;
+     border-radius: 8px;
+     padding: 1rem;
+     display: flex;
+     flex-direction: column;
+}
+
+.container-grocery p { 
+     font-size: 1.32rem;
+     line-height: 2rem;
+     text-align: left;
+     color:white;
+     /*font-family: "Montserrat"'*/
+}
+
+/*** End Alexis/Anagha Google Map API CSS ***/
+
+
+
+
+
+  /* This will be applied on any screen smaller than 768px */
+@media screen and (max-width: 768px) {
+
+    .covid-related-conatiner {
+        margin-top: 0rem;
+    }
+
+
+    .btn-city {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        font-size: .65rem;
+        text-align: left;
+        /*margin-bottom: 1rem;*/
+    }
+  
+  }
+
+@media only screen and (min-width: 601px) {
+    .container-width {
+        width: 100%;
+        max-width: none;
+    
+    }
+    
+}
+
+
+    /* This will be applied on any screen smaller than 378px */
+@media screen and (max-width: 378px) {
+
+    .container-width {
+        width: 100%;
+        max-width: none;
+    
+    }
+    
+
+    nav .brand-logo {
+
+        font-size: 1.5rem;
+    
+    
+    }
+
+    .left-column {
+        margin-top: 0px;
+    }
+    
+
+    .covid-related-conatiner {
+        margin-top: 1.5rem;
+    }
+
+    .btn-city {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        font-size: 1rem;
+        text-align: left;
+        /*margin-bottom: 1rem;*/
+    }
+  
+  }
+
