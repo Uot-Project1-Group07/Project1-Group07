@@ -1,0 +1,18 @@
+.typing {
+      padding-right: 15px;
+      padding-left: 15px;
+}
+   
+#user2 {
+      margin-left: auto;
+}
+  
+.userimg {
+      height: 25px;
+}
+  
+.response {
+      display: flex;
+      align-items: center;
+      margin: 1%;
+}
