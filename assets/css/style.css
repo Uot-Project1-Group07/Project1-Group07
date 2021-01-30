@@ -120,12 +120,6 @@ iframe {
   flex-direction: column;
 }
 
-#area-stats {
-    display: flex;
-    flex-direction: column;
-
-}
-
 .btn-more {
     font-size: 1rem;
     text-align: right;
@@ -146,6 +140,16 @@ iframe {
     display: flex;
     flex-direction: column;
     border-radius: 8px;    
+}
+
+.stat-card {
+  border-radius: 8px;
+}
+
+#stat-credit a {
+  color: white;
+  outline: none;
+  text-decoration: none;
 }
 
 .affiliations-related-containter {

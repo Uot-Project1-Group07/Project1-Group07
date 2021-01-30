@@ -4,7 +4,7 @@ var canadaVaccinatedEl = document.querySelector("#CAvaccinated");
 var canadaRecoveredNewEl = document.querySelector("#CArecoverednew");
 var canadaVaccineNewEl = document.querySelector("#CAvaccinatednew");
 var areaStatsEl = document.querySelector("#area-stats");
-
+var statDateEl = document.querySelector("#stat-date");
 
 //get data for selected area
 var getAreaData = function(area) {
@@ -33,10 +33,12 @@ var getCanadaData = function() {
       var caVaccinated = data.summary[0].cumulative_avaccine;
       var caRecoveredNew = data.summary[0].recovered;
       var caVaccinatedNew = data.summary[0].avaccine;
+      var statVersion = data.version;
       canadaRecoveredEl.textContent = caRecovered;
       canadaVaccinatedEl.textContent = caVaccinated;
       canadaRecoveredNewEl.textContent = caRecoveredNew;
       canadaVaccineNewEl.textContent = caVaccinatedNew
+      statDateEl.textContent = statVersion;
     })
   })
 }
@@ -60,7 +62,7 @@ var displayAreaData = function(data) {
 
   //create stat card panel
   var statPanelEl = document.createElement("div");
-  statPanelEl.classList.add("card-panel", "teal", "lighten-1");
+  statPanelEl.classList.add("card-panel", "teal", "lighten-1", "stat-card");
   areaStatsEl.appendChild(statPanelEl);
 
   //create new recoveries element
