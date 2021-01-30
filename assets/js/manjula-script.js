@@ -147,10 +147,12 @@ var tbody = document.querySelector("#data_info");
 var formEl = document.querySelector('#form');
 //All entered values go in here
 var objectArraylist = [];
+
 //Set item
 var enter_comment = function(key,value){
   localStorage.setItem(key,JSON.stringify(value));
 };
+
 // to store retrived data
 var retrievedList;
 //Date input
@@ -190,11 +192,15 @@ function commentPopulate(){  //Triggered onLoad
   retrievedList = localStorage.getItem('userComment');
   retrievedList = JSON.parse(retrievedList);
 
+  console.log('Retrieved list length: '+ retrievedList.length);
+  console.log(retrievedList);
+
   // To retrieve older data (if available)
   var i=0;
   while(i<=retrievedList.length){
     var savedData = retrievedList.pop();
-    objectArraylist.push(objectArraylist.unshift(savedData));
+    console.log(JSON.stringify(savedData));
+    objectArraylist.unshift(savedData);
     createComment(savedData);
     i++;
   };
@@ -243,9 +249,10 @@ var createComment = function(arrayComment){
   var comment = document.createElement('tr');
   //comment.className = "collection-item";
   comment.innerHTML = "<td><div class='card-panel small'>" + 
-  "<img src='./assets/icons/person.png' alt='' class='circle responsive-img' style='width: 5%; margin:1%;'> <span class='card-title' style='padding-bottom: 10%;'>"
+  "<img src='./assets/icons/person.png' alt='' class='circle responsive-img' style='width: 4%; margin:1%;'> <span class='card-title' style='padding-bottom: 10%;'>"
   + arrayComment.login +
-  "</span> <div class='card-content'>" + arrayComment.user_comment + "</div></div></td>";
+  "</span> <div class='card-content'><h4 style='text-align:center;'>" + arrayComment.user_comment + "</h4>"+
+  "<p style='text-align:right; background-color: coral'>" +arrayComment.date+ "<p></div></div></td>";
   tbody.prepend(comment)
   commentArea.prepend(tbody);  //to add to the top
 
