@@ -69,20 +69,27 @@ var prompts = [
 
  
   var inputField = document.getElementById("input");
-
+  var sendbtnEl = document.querySelector(".send-btn");
 
 //get input on keyenter event
   var getevent = function(e)
-  {   
-      
+  {         
     if (e.code === "Enter") 
     {
       let input = inputField.value;
       inputField.value = "";
       output(input);
     } 
-
   };
+
+
+  var getclick = function(e)
+  {
+    let input = inputField.value;
+      inputField.value = "";
+      output(input);
+  };
+
   
   function output(input) {
     let product;
@@ -169,3 +176,4 @@ var prompts = [
   };
 
   inputField.addEventListener("keydown",getevent);
+  sendbtnEl.addEventListener("click",getclick);
