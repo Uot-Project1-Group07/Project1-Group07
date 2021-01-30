@@ -4,6 +4,7 @@ var userPasswordEl = document.querySelector("#userPswd");
 var userFormEl = document.querySelector("#login-form");
 var userInfo = JSON.parse(localStorage.getItem("user-Info")) || [];
 var loginForm = document.querySelector("#id01");
+var ageModalText = document.querySelector('.ageMsg');
 
 //Function to get to get user input
 var formLoginHandler = function (event) {
@@ -18,15 +19,15 @@ var formLoginHandler = function (event) {
   window.localStorage.setItem("user-info", JSON.stringify(userInfo));
 
   //check for age and display message indicating page user will be sent to.
-  // if (userAge <= 12) {
-  //   alert('You will be directed to the "Kids" page!');
-  // } else if (userAge >= 13 && userAge <= 19) {
-  //   alert('You will be directed to the "Teenagers" page!');
-  // } else if (userAge >= 20 && userAge <= 64) {
-  //   alert('You will be directed to the "Adults" page!');
-  // } else {
-  //   alert('You will be directed to the "Seniors" page!');
-  // }
+  if (userAge <= 12) {
+    ageModalText.textContent = "You will be connected to the 'Kids' page!"
+      } else if (userAge >= 13 && userAge <= 19) {
+    ageModalText.textContent ='You will be connected to the "Teenagers" page!'
+      } else if (userAge >= 20 && userAge <= 64) {
+    ageModalText.textContent = 'You will be connected to the "Adults" page!'
+      } else {
+    ageModalText.textContent = 'You will be connected to the "Seniors" page!'
+      }
   
   // optional hide form after login
   loginForm.style.display = "none";
