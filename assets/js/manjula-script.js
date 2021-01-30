@@ -139,26 +139,142 @@ var datePicker = function(e){
 
 //Submit button
 var submit = document.querySelector("#submitButton");
+//table element
+var commentArea = document.querySelector("#comment_info");
+//tbody
+var tbody = document.querySelector("#data_info");
+//form element
+var formEl = document.querySelector('#form');
+//All entered values go in here
+var objectArraylist = [];
 
-//user inputs
-var user = document.getElementById('user');
-var userComment = document.querySelector("#user_2");
+//Set item
+var enter_comment = function(key,value){
+  localStorage.setItem(key,JSON.stringify(value));
+};
 
-//Create div.card. This inside it div.card-content
-var commentArea = document.querySelector('#comment_info')
+// to store retrived data
+var retrievedList;
+//Date input
+var dateInput = new Date();
+
+
+//*********************** */
+
+//**     Pagination  */
+$(document).ready(function(){
+  $('#comment_info').pageMe({
+    pagerSelector:'#myPager',
+    activeColor: 'blue',
+    prevText:'Anterior',
+    nextText:'Siguiente',
+    showPrevNext:true,
+    hidePageNumbers:false,
+    perPage:5
+  });
+});
+
+var pagTest = function (){
+  $('#comment_info').pageMe({
+    pagerSelector:'#myPager',
+    activeColor: 'blue',
+    prevText:'Anterior',
+    nextText:'Siguiente',
+    showPrevNext:true,
+    hidePageNumbers:false,
+    perPage:5
+  });
+};
+//***    **************   */
+
+function commentPopulate(){  //Triggered onLoad
+  //retrieve old
+  retrievedList = localStorage.getItem('userComment');
+  retrievedList = JSON.parse(retrievedList);
+
+  console.log('Retrieved list length: '+ retrievedList.length);
+  console.log(retrievedList);
+
+  // To retrieve older data (if available)
+  var i=0;
+  while(i<=retrievedList.length){
+    var savedData = retrievedList.pop();
+    console.log(JSON.stringify(savedData));
+    objectArraylist.unshift(savedData);
+    createComment(savedData);
+    i++;
+  };
+};
 
 var commentor = function (e){
 
   e.preventDefault();
   
-  var comment = document.createElement('li');
-  comment.className = "collection-item";
-  comment.innerHTML = "<div class='card'> <span class='card-title'>"+ user.value +
-  "</span> <div class='card-content'>" + userComment.value + "</div></div>";
-  commentArea.prepend(comment);  //to add to the top
-}
+    //Enter user comment to an object
+    var newComment = {
+      login: user.value,
+      user_comment: user_2.value,
+      date: dateInput.toDateString()
+    };
 
-//*********************** */
+    //Add to card and store in localStorage
+    objectArraylist.unshift(newComment);
+    enter_comment('userComment',objectArraylist);
+
+    //retrieve new input
+    retrievedList = localStorage.getItem('userComment');
+    retrievedList = JSON.parse(retrievedList);
+    createComment(retrievedList.shift());
+
+    //Clear content from the form
+    formEl.reset();
+};
+
+var newPagination = function(){
+
+  document.getElementById('myPager').remove();
+
+  var pag = document.getElementById('pagLink');
+
+  var newUl = document.createElement('ul');
+  newUl.classList = "pagination pager";
+  newUl.setAttribute('id','myPager');
+  pag.appendChild(newUl);
+
+  pagTest();
+};
+
+var createComment = function(arrayComment){
+
+  var comment = document.createElement('tr');
+  //comment.className = "collection-item";
+  comment.innerHTML = "<td><div class='card-panel small' style='padding: 0%; margin: 0%;'>" + 
+  "<img src='./assets/icons/person.png' alt='' class='circle responsive-img' style='width: 4%; margin:1%;'> Login: "+
+   "<span class='card-title' style='font-size: larger; padding-left:5%;'>"
+  + arrayComment.login +
+  "</span> <div class='card-content'><p style='padding-left:6.5%;'> Comment: <span style='padding-left:3%;'>" + arrayComment.user_comment + "</span></p>"+
+  "<p style='text-align:right; background-color: coral'>" +arrayComment.date+ "<p></div></div></td>";
+  tbody.prepend(comment)
+  commentArea.prepend(tbody);  //to add to the top
+
+  newPagination();
+
+  submit.disabled = true;
+};
+
+var countEntered = 0;
+
+var entered = function (){
+  //alert("entered");
+  countEntered++;
+  if(countEntered === 2){
+    submit.disabled = false;
+    countEntered = 0;
+  }
+};
+
+
+//**************** */
   //carousel
   $(document).ready(function(){
     $('.carousel-slider').carousel({
@@ -184,6 +300,9 @@ var commentor = function (e){
   });
 //******************************/
 
+//To unlock the submit button
+user.addEventListener('input',entered);
+user_2.addEventListener('input',entered);
 //Triggers when the user selects a date
 input.addEventListener('input', datePicker);
 //Triggers when user submits a comment
