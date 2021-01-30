@@ -24,7 +24,18 @@
       </p>
     </header>
 
-    
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <p class="ageMsg"></p>
+        <button
+          class="waves-effect waves-light sign-in-btn"
+          onclick="window.location.href='./index.html';"
+        >
+          Connect me!
+        </button>
+      </div>
+    </div>
 
     <div id="id01" class="col s12 login-form">
       <!-- Form Content -->
@@ -50,7 +61,11 @@
             />
           </div>
 
-          <button class="waves-effect waves-light sign-in-btn" type="submit">
+          <button
+            class="waves-effect waves-light sign-in-btn"
+            type="submit"
+            id="login-btn"
+          >
             Sign in
           </button>
         </div>
