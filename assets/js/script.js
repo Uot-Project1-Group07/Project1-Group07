@@ -396,7 +396,7 @@ function addChat(input, product) {
   let user1Div = document.createElement("div");
   user1Div.id = "user";
   user1Div.className = "user response";
-  user1Div.innerHTML = `<img src="./assets/images/user.png" class="userimg"><span>${input}</span>`;
+  user1Div.innerHTML = `<img src="./assets/images/carrot.JPG" class="userimg circle"><span>${input}</span>`;
   messagesContainer.appendChild(user1Div);
 
   let user2Div = document.createElement("div");
@@ -404,8 +404,9 @@ function addChat(input, product) {
   let user2Text = document.createElement("span");
   user2Div.id = "user2";
   user2Div.className = "response";
-  user2Img.src = "./assets/images/user1.png";
-  user2Img.className = "userimg";   
+  user2Img.src = "./assets/images/rabbit.JPG";
+  user2Img.classList = "userimg circle";
+  //user2Img.className = "userimg";   
   user2Text.className = "typing";
   user2Text.innerText = "Typing...";
   user2Div.appendChild(user2Text);

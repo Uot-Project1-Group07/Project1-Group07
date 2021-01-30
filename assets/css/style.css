@@ -75,6 +75,9 @@ iframe {
 }
 
 /*** Dynamic Chat container styles ***/
+.chat {
+  margin-top: 15px;
+}
 .typing {
   padding-right: 15px;
   padding-left: 15px;
