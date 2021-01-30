@@ -1,23 +1,4 @@
-<<<<<<< HEAD
 $(document).ready(function() { // Wait for the DOM to be ready for window., javascript/jquery and others
-=======
-
-
-$(document).ready(function(){// *** jQuery section *** //
-
-    
-    $('.sidenav').sidenav();
-
-    // *** Alexis/Anagha Google API ***
-
-    if ("geolocation" in navigator) {
-        navigator.geolocation.getCurrentPosition(function (p) {
-            var latitude = p.coords.latitude;
-            var longitude = p.coords.longitude;
-            var position = latitude + "," + longitude; // from this we have determined the coordinates from the browser and made them a string, which we can pass into the url. 
-
-            console.log(position); //logging the position to the console in order to verify that function is working
->>>>>>> f5fed3525fefaab92dd1ec6dffc4581cbc52f640
 
             var url = "https://www.google.com/maps/embed/v1/view?center="+position+"&zoom=14&key=AIzaSyDs--vVtRh3_b44YkAcNtzhQ_BrgJdpat4";
             $("iframe").attr('src',url); //this generates the map supplying the empty src attribute with the url plus string coordinates
