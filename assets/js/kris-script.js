@@ -51,6 +51,7 @@ var displayAreaData = function(data) {
   var areaRecovered = data.summary[0].cumulative_recovered;
   var areaVaccineNew = data.summary[0].avaccine;
   var areaVaccinated = data.summary[0].cumulative_avaccine;
+  console.log(areaSelectEl.input)
   
   //clear old data
   areaStatsEl.textContent = ""

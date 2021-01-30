@@ -57,7 +57,9 @@ html, body {
     font-size: 1rem;
     text-align: left;
     margin-bottom: 1px;
+    padding: 0 8px;    
 }
+
 #area-stats {
   display: flex;
   flex-direction: column;
@@ -82,8 +84,7 @@ html, body {
 
 .covid-related-conatiner {
     display: flex;
-    flex-direction: column;
-    
+    flex-direction: column;    
 }
 
 .affiliations-related-containter {
