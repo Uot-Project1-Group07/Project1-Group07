@@ -1,5 +1,5 @@
 // Options the user could type in
-const prompts = [
+var prompts = [
     ["hi", "hey", "hello","hi there"], 
     ["good morning"], ["good afternoon"],["good night"],
     ["how are you", "how is life", "how are things"],
@@ -25,7 +25,7 @@ const prompts = [
   
   // Possible responses, in corresponding order
   
-  const replies = [
+  var replies = [
     ["Hello!", "Hi!", "Hey!", "Hi there!"],
     ["good morning"], ["good afternoon"],["good night"],
     [
@@ -54,7 +54,7 @@ const prompts = [
   
   // Random for any other user input
   
-  const alternative = [
+  var alternative = [
     "Same",
     "Go on...",
     "Sorry I don't understand :/",
@@ -64,34 +64,35 @@ const prompts = [
   
   // any other responses for covid word found
   
-  const coronavirus = ["Please stay home", "Wear a mask", "Fortunately, I have COVID", "These are uncertain times",
+  var coronavirus = ["Please stay home", "Wear a mask", "Fortunately, I have COVID", "These are uncertain times",
                        "Need to take precautions"]
+
+ 
+  var inputField = document.getElementById("input");
 
 
 //get input on keyenter event
-document.addEventListener("DOMContentLoaded", () => {
-    const inputField = document.getElementById("input");
-    inputField.addEventListener("keydown", (e) => {
-      if (e.code === "Enter") {
-        let input = inputField.value;
-        inputField.value = "";
-        output(input);
-      }
-    });
-  });
+  var getevent = function(e)
+  {   
+      
+    if (e.code === "Enter") 
+    {
+      let input = inputField.value;
+      inputField.value = "";
+      output(input);
+    } 
+
+  };
   
   function output(input) {
     let product;
   
     // Regex remove non word/space chars
     // Trim trailing whitespce
-    // Remove digits - not sure if this is best
-    // But solves problem of entering something like 'hi1'
-
-   
+      
     let text = input.toLowerCase().replace(/[^\w\s]/gi, "").replace(/[\d]/gi, "").trim();
     text = text
-      .replace(/ a /g, " ")   // 'tell me a story' -> 'tell me story'
+      .replace(/ a /g, " ")   
       .replace(/i feel /g, "")
       .replace(/whats/g, "what is")
       .replace(/please /g, "")
@@ -137,7 +138,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   
   function addChat(input, product) {
-    const messagesContainer = document.getElementById("messages");
+    var messagesContainer = document.getElementById("messages");
   
     let user1Div = document.createElement("div");
     user1Div.id = "user";
@@ -165,4 +166,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 2000
     )
   
-  }
+  };
+
+  inputField.addEventListener("keydown",getevent);
