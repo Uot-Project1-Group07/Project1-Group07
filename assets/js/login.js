@@ -18,19 +18,29 @@ var formLoginHandler = function (event) {
   window.localStorage.setItem("user-info", JSON.stringify(userInfo));
 
   //check for age and display message indicating page user will be sent to.
-  if (userAge <= 12) {
-    alert('You will be directed to the "Kids" page!');
-  } else if (userAge >= 13 && userAge <= 19) {
-    alert('You will be directed to the "Teenagers" page!');
-  } else if (userAge >= 20 && userAge <= 64) {
-    alert('You will be directed to the "Adults" page!');
-  } else {
-    alert('You will be directed to the "Seniors" page!');
-  }
+  // if (userAge <= 12) {
+  //   alert('You will be directed to the "Kids" page!');
+  // } else if (userAge >= 13 && userAge <= 19) {
+  //   alert('You will be directed to the "Teenagers" page!');
+  // } else if (userAge >= 20 && userAge <= 64) {
+  //   alert('You will be directed to the "Adults" page!');
+  // } else {
+  //   alert('You will be directed to the "Seniors" page!');
+  // }
+  
   // optional hide form after login
   loginForm.style.display = "none";
-  //redirect to main page *****Conf path correct******
-  window.location = "./index.html";
 };
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("login-btn");
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
 
 userFormEl.addEventListener("submit", formLoginHandler);
