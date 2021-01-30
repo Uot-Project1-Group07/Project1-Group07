@@ -21,7 +21,6 @@ iframe {
 
 
 
-
 .fas {
     background-color: coral;
 }
@@ -70,9 +69,36 @@ iframe {
 .text-align-left {
     text-align: left;
 }
+
 .dropdown-trigger {
     margin-bottom: 5px;
 }
+
+/*** Dynamic Chat container styles ***/
+.chat {
+  margin-top: 15px;
+}
+.typing {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+#user2 {
+  margin-left: auto;
+}
+
+.userimg {
+  height: 25px;
+}
+
+.response {
+  display: flex;
+  align-items: center;
+  margin: 1%;
+}
+
+/*** End of  Chat container styles ***/
+
 
 .btn-links {
     font-size: 1rem;
