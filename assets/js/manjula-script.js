@@ -35,7 +35,7 @@ var dates = function (){
     //reprase the selected date and show 
     var givenDate = document.createElement('h4');
     givenDate.setAttribute('text-align','right');
-    givenDate.innerHTML = "<h4 style='text-align:center'>Covid contracted date you gave was <b>"+arrDates[0].toDateString()+"</b></h4><hr><br>";
+    givenDate.innerHTML = "<h4 style='text-align:center'>Covid contracted date you gave was <b><span style='background-color: coral'>"+arrDates[0].toDateString()+"</span></b></h4><hr><br>";
     dateArea.appendChild(givenDate);
 
     //can I make an image pop out
@@ -61,62 +61,62 @@ var dates = function (){
 
     var day1 = document.createElement("li");
     day1.setAttribute('list-style-type','none');       //NOT working
-    day1.innerHTML = "<h5><b>"+ arrDates[0].toDateString()+ "</b></h5>" + "<h5p>" +
+    day1.innerHTML = "<h5 class='green'><b>"+ arrDates[0].toDateString()+ "</b></h5>" + "<h5p>" +
         "Most of those infected – 88% – will have a fever and feel tired. Many also have muscle pain and a dry cough." + "</p>" +
         "<p>Some people, around 10% according to the study from China, experience nausea or have diarrhea in the days just before the fever begins.</p>";
     dateArea.appendChild(day1);
 
     var day2to4 = document.createElement("li");
     day2to4.setAttribute('list-style-type','none');        //NOT working
-    day2to4.innerHTML = "<h5><b>"+ arrDates[1].toDateString() + " to " + arrDates[3].toDateString()+ "</b></h5>" +   
+    day2to4.innerHTML = "<h5 class='green'><b>"+ arrDates[1].toDateString() + " to " + arrDates[3].toDateString()+ "</b></h5>" +   
     "<p>The average duration of fever was 12 days. Ninety-nine percent of the patients studied had a fever. About 50% felt fatigued and had a dry cough, with 33% having difficulty breathing and complaining of muscle pain.</p>";
     dateArea.appendChild(day2to4);    
     
     var day5 = document.createElement("li");
     day5.setAttribute('list-style-type','none');       //NOT working
-    day5.innerHTML = "<h5><b>"+ arrDates[4].toDateString()+ "</b></h5>" + 
+    day5.innerHTML = "<h5 class='green'><b>"+ arrDates[4].toDateString()+ "</b></h5>" + 
     "<p>The average duration of fever was 12 days. Ninety-nine percent of the patients studied had a fever. About 50% felt fatigued and had a dry cough, with 33% having difficulty breathing and complaining of muscle pain.</p>";
     dateArea.appendChild(day5);
 
     var day6 = document.createElement("li");
     day6.setAttribute('list-style-type','none');       //NOT working
-    day6.innerHTML = "<h5><b>"+ arrDates[5].toDateString()+ "</b></h5>" + 
+    day6.innerHTML = "<h5 class='green'><b>"+ arrDates[5].toDateString()+ "</b></h5>" + 
     "<p>Breathing difficulty, cough and fever persist. Some people describe chest tightening or having a feeling that a “band” is around their chest.</p>";
     dateArea.appendChild(day6);
 
     var day7 = document.createElement("li");
     day7.setAttribute('list-style-type','none');       //NOT working
-    day7.innerHTML = "<h5><b>"+ arrDates[6].toDateString()+ "</b></h5>" + 
+    day7.innerHTML = "<h5 class='green'><b>"+ arrDates[6].toDateString()+ "</b></h5>" + 
     "<p>Breathing difficulty, cough and fever persist. Some people describe chest tightening or having a feeling that a “band” is around their chest.</p>";
     dateArea.appendChild(day7);
 
     var day8 = document.createElement("li");
     day8.setAttribute('list-style-type','none');       //NOT working
-    day8.innerHTML = "<h5><b>"+ arrDates[7].toDateString()+ "</b></h5>" + 
+    day8.innerHTML = "<h5 class='green'><b>"+ arrDates[7].toDateString()+ "</b></h5>" + 
     "<p>Breathing difficulty, cough and fever persist. Some people describe chest tightening or having a feeling that a “band” is around their chest.</p>";
     dateArea.appendChild(day8);
 
     var day10 = document.createElement("li");
     day10.setAttribute('list-style-type','none');       //NOT working
-    day10.innerHTML = "<h5><b>"+ arrDates[9].toDateString()+ "</b></h5>" + 
+    day10.innerHTML = "<h5 class='green'><b>"+ arrDates[9].toDateString()+ "</b></h5>" + 
     "<p>Breathing difficulty, cough and fever persist. Some people describe chest tightening or having a feeling that a “band” is around their chest.</p>";
     dateArea.appendChild(day10);
 
     var day12 = document.createElement("li");
     day12.setAttribute('list-style-type','none');       //NOT working
-    day12.innerHTML = "<h5><b>"+ arrDates[11].toDateString()+ "</b></h5>" + 
+    day12.innerHTML = "<h5 class='green'><b>"+ arrDates[11].toDateString()+ "</b></h5>" + 
     "<p>Breathing difficulty, cough and fever persist. Some people describe chest tightening or having a feeling that a “band” is around their chest.</p>";
     dateArea.appendChild(day12);
 
     var day13to14 = document.createElement("li");
     day13to14.setAttribute('list-style-type','none');       //NOT working
-    day13to14.innerHTML = "<h5><b>"+ arrDates[12].toDateString() + " to " + arrDates[13].toDateString() + "</b></h5>" + 
+    day13to14.innerHTML = "<h5 class='green'><b>"+ arrDates[12].toDateString() + " to " + arrDates[13].toDateString() + "</b></h5>" + 
     "<p>Breathing difficulty, cough and fever persist. Some people describe chest tightening or having a feeling that a “band” is around their chest.</p>";
     dateArea.appendChild(day13to14);
 
     var day18 = document.createElement("li");
     day18.setAttribute('list-style-type','none');       //NOT working
-    day18.innerHTML = "<h5><b>"+ arrDates[17].toDateString() + "</b></h5>" + 
+    day18.innerHTML = "<h5 class='green'><b>"+ arrDates[17].toDateString() + "</b></h5>" + 
     "<p>Breathing difficulty, cough and fever persist. Some people describe chest tightening or having a feeling that a “band” is around their chest.</p>";
     dateArea.appendChild(day18);
 };
@@ -253,7 +253,7 @@ var createComment = function(arrayComment){
    "<span class='card-title' style='font-size: larger; padding-left:5%;'>"
   + arrayComment.login +
   "</span> <div class='card-content'><p style='padding-left:6.5%;'> Comment: <span style='padding-left:3%;'>" + arrayComment.user_comment + "</span></p>"+
-  "<p style='text-align:right; background-color: coral'>" +arrayComment.date+ "<p></div></div></td>";
+  "<p style='text-align:right; background-color: #ffef96'>" +arrayComment.date+ "<p></div></div></td>";
   tbody.prepend(comment)
   commentArea.prepend(tbody);  //to add to the top
 
