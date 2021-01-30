@@ -144,7 +144,8 @@ iframe {
 
 .covid-related-conatiner {
     display: flex;
-    flex-direction: column;    
+    flex-direction: column;
+    border-radius: 8px;    
 }
 
 .affiliations-related-containter {
