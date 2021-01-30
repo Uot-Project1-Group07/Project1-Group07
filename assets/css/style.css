@@ -4,6 +4,23 @@ html, body {
     height: 100%;
   }
 
+iframe {
+ 
+    width: 100%;
+    position: relative;
+  
+    
+
+}
+
+.container-width {
+    width: 90%;
+    max-width: none;
+
+}
+
+
+
 .fas {
     background-color: coral;
 }
@@ -29,8 +46,7 @@ html, body {
     border-bottom-right-radius: 30px 30px;
     background-size: cover; /* Image will cover the background */
     background-position:  100% 13%; /* Aligned the image to show the top of the tower*/
-   
-  }
+}
 
 
 
@@ -43,9 +59,46 @@ html, body {
     flex-wrap: nowrap;
     
 }
+
+
+.card-panel-chat {
+    padding: 5px;
+}
+
+
+.text-align-left {
+    text-align: left;
+}
+
 .dropdown-trigger {
     margin-bottom: 5px;
 }
+
+/*** Dynamic Chat container styles ***/
+.chat {
+  margin-top: 15px;
+}
+.typing {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+#user2 {
+  margin-left: auto;
+}
+
+.userimg {
+  height: 25px;
+}
+
+.response {
+  display: flex;
+  align-items: center;
+  margin: 1%;
+}
+
+/*** End of  Chat container styles ***/
+
 
 .btn-links {
     font-size: 1rem;
@@ -54,6 +107,8 @@ html, body {
 }
 
 .btn-city {
+    margin-top: 5px;
+    margin-bottom: 5px;
     font-size: 1rem;
     text-align: left;
     margin-bottom: 1px;
@@ -65,6 +120,11 @@ html, body {
   flex-direction: column;
 }
 
+#area-stats {
+    display: flex;
+    flex-direction: column;
+
+}
 
 .btn-more {
     font-size: 1rem;
@@ -170,6 +230,9 @@ html, body {
   }
 */
 
+
+/*** Start of Anagha's Joke API ***/
+
 .joke-sec {
     margin-top: 2rem;
     margin-bottom: 3rem;
@@ -234,7 +297,154 @@ html, body {
       
   #clickme:hover{
       background-color: rgb(207, 197, 173);
+      
    }
 
+   
+/*** End of Anagha's Joke API ***/
 
+
+
+/*** Start of Raj's Inspirational Quotes API ***/
+
+.title-inspo {
+    /*position: absolute;*/
+    /*margin-left: 50px;*/
+    top: 10px;
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  .container-inspo {
+    /* width: 60%;*/
+     /*max-width: 300px; */
+     height: auto;
+     border-radius: 8px;
+     /*border :0.3rem solid orange;*/
+     padding: 1rem;
+     display: flex;
+     flex-direction: column;
+   }
+   .container-inspo p {
+ 
+     font-size: 1.32rem;
+     line-height: 2rem;
+     text-align: left;
+     color:white;
+     font-family: "Montserrat";
+   }
+
+   #inspo-refresh
+   {
+     
+       align-self: flex-end;
+    
+       }
+
+
+
+  /*** End of Raj's Inspirational Quotes API ***/
+
+
+/*** Alexis/Anagha Google Map API CSS ***/
+
+.grocery-sec {
+    /*margin-top: 2rem;*/
+    /*margin-bottom: 3rem;*/
+  }
+
+.title-grocery {
+    top: 10px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    color:white;
+}
+
+.container-grocery {
+     height: auto;
+     border-radius: 8px;
+     padding: 1rem;
+     display: flex;
+     flex-direction: column;
+}
+
+.container-grocery p { 
+     font-size: 1.32rem;
+     line-height: 2rem;
+     text-align: left;
+     color:white;
+     /*font-family: "Montserrat"'*/
+}
+
+/*** End Alexis/Anagha Google Map API CSS ***/
+
+
+
+
+
+  /* This will be applied on any screen smaller than 768px */
+@media screen and (max-width: 768px) {
+
+    .covid-related-conatiner {
+        margin-top: 0rem;
+    }
+
+
+    .btn-city {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        font-size: .65rem;
+        text-align: left;
+        /*margin-bottom: 1rem;*/
+    }
+  
+  }
+
+@media only screen and (min-width: 601px) {
+    .container-width {
+        width: 100%;
+        max-width: none;
+    
+    }
+    
+}
+
+
+    /* This will be applied on any screen smaller than 378px */
+@media screen and (max-width: 378px) {
+
+    .container-width {
+        width: 100%;
+        max-width: none;
+    
+    }
+    
+
+    nav .brand-logo {
+
+        font-size: 1.5rem;
+    
+    
+    }
+
+    .left-column {
+        margin-top: 0px;
+    }
+    
+
+    .covid-related-conatiner {
+        margin-top: 1.5rem;
+    }
+
+    .btn-city {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        font-size: 1rem;
+        text-align: left;
+        /*margin-bottom: 1rem;*/
+    }
+  
+  }
 
