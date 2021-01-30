@@ -17,7 +17,7 @@
     </style>
     <title>Personal Care</title>
   </head>
-  <body>
+  <body onload="commentPopulate()">
 
   <div class="container container-width">
 
@@ -26,7 +26,7 @@
     <div>   
       <nav>
         <div class="nav-wrapper green">
-          <a class="brand-logo">Personal Care</a>
+          <a class="brand-logo flex-text">Personal Care</a>
           <ul class="right">
             <li><a href="./index.html">Home Page</a></li>
           </ul>
@@ -139,7 +139,7 @@
                 <!-- Modal Structure -->
                 <div id="modal1" class="modal">
                   <div class="modal-content">
-                    <embed src="./assets/pdf/cropped.pdf" width="1000px" height="990px" />
+                    <img src="./assets/modal/cropped-1.png" alt=""  style="width:100%; height:50%" />
                   </div>
                 </div>
               </li>
@@ -240,9 +240,26 @@
             <div class="col 1">
               <button class="waves-effect waves-light btn" type="submit" id="submitButton">Submit<i class="material-icons right">send</i></a>
             </div>
+            <div class="col 1">
+              <button class="waves-effect waves-light btn" type="button" onclick="clearing()">Clear history</button>
+            </div>
         </div>
         </form>
       </div>
+
+      <div class="row">
+        <div class="col s12 m12 center">
+          <!-- Comment cards appear here-->
+          <table id="comment_info">
+              <tbody id='data_info'>
+              </tbody>
+          </table>
+          <div class="col-md-12 center text-center" id="pagLink">
+              <span class="left" id="total_reg"></span>
+              <ul class="pagination pager" id="myPager"></ul>
+          </div>
+      </div>
+      <br>
 
       <!--New comments entered will appear here-->
       <div id="comment_info">
@@ -265,9 +282,17 @@
 
       <!-- Compiled and minified JavaScript -->
       <script type = "text/javascript" src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>  
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>            
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> 
+      <!-- Pagination link-->
+      <script type="text/javascript" src="https://cdn.rawgit.com/pinzon1992/materialize_table_pagination/f9a8478f/js/pagination.js"></script>           
       <!--My Javascript coding-->
       <script src="./assets/js/manjula-script.js"></script>
+
+      <script>
+        function clearing(){   //For testing
+            localStorage.clear();
+        }
+      </script>
     </div>
   </body>
 </html>
