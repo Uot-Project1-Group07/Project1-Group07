@@ -248,10 +248,11 @@ var createComment = function(arrayComment){
 
   var comment = document.createElement('tr');
   //comment.className = "collection-item";
-  comment.innerHTML = "<td><div class='card-panel small'>" + 
-  "<img src='./assets/icons/person.png' alt='' class='circle responsive-img' style='width: 4%; margin:1%;'> <span class='card-title' style='padding-bottom: 10%;'>"
+  comment.innerHTML = "<td><div class='card-panel small' style='padding: 0%; margin: 0%;'>" + 
+  "<img src='./assets/icons/person.png' alt='' class='circle responsive-img' style='width: 4%; margin:1%;'> Login: "+
+   "<span class='card-title' style='font-size: larger; padding-left:5%;'>"
   + arrayComment.login +
-  "</span> <div class='card-content'><h4 style='text-align:center;'>" + arrayComment.user_comment + "</h4>"+
+  "</span> <div class='card-content'><p style='padding-left:6.5%;'> Comment: <span style='padding-left:3%;'>" + arrayComment.user_comment + "</span></p>"+
   "<p style='text-align:right; background-color: coral'>" +arrayComment.date+ "<p></div></div></td>";
   tbody.prepend(comment)
   commentArea.prepend(tbody);  //to add to the top
