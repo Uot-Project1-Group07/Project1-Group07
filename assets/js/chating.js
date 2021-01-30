@@ -168,9 +168,9 @@ var prompts = [
     
   
     // Fake delay to seem "real"
-    setTimeout(() => {
+    setTimeout(function() {
       user2Text.innerText = `${product}`;    
-    }, 2000
+    }, 1000
     )
   
   };
