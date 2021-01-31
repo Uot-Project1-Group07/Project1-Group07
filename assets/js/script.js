@@ -177,7 +177,7 @@ function getstores(lat,lon)
            
             var storeEl = document.querySelector(".store1");
             var addressstore = data.results[0].vicinity;
-            storeEl.innerHTML = "Name :"+nm+"</br>"+"Open hours: "+oepnstore+"</br>"+"Store Ratings: "+ratingstore+"</br>"+"Address: "+addressstore+"</br";
+            storeEl.innerHTML = "Name: "+nm+"</br>"+"Open hours: "+oepnstore+"</br>"+"Store Ratings: "+ratingstore+"</br>"+"Address: "+addressstore+"</br";
 
             //store2 data
             var nm = data.results[1].name;  
@@ -196,7 +196,7 @@ function getstores(lat,lon)
             }
 
             var storeEl = document.querySelector(".store2");
-            storeEl.innerHTML = "Name :"+nm+"</br>"+"Open hours: "+oepnstore+"</br>"+"Store Ratings: "+ratingstore+"</br>"+"Address: "+addressstore+"</br";
+            storeEl.innerHTML = "Name: "+nm+"</br>"+"Open hours: "+oepnstore+"</br>"+"Store Ratings: "+ratingstore+"</br>"+"Address: "+addressstore+"</br";
                                                    
               
         })        
