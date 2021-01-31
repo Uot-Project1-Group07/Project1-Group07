@@ -285,7 +285,7 @@ var entered = function (){
   $(document).ready(function(){
     $('.carousel-slider').carousel({
         fullWidth: true,
-        indicators: true,
+        indicators: false,
         dist: -100
     });
 

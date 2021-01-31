@@ -397,12 +397,6 @@ iframe {
   /* This will be applied on any screen smaller than 768px */
 @media screen and (max-width: 768px) {
 
-    .test{
-      color: rgba(0,0,0,0);
-    }
-
-
-
     .container-width{
       margin:0;
       width:100%;
