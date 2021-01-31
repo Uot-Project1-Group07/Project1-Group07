@@ -60,64 +60,64 @@ var dates = function (){
     //Generating dates and day's possible symptom description
 
     var day1 = document.createElement("li");
-    day1.setAttribute('list-style-type','none');       //NOT working
+    day1.setAttribute('list-style-type','none');       
     day1.innerHTML = "<h5 class='green'><b>"+ arrDates[0].toDateString()+ "</b></h5>" + "<h5p>" +
         "Most of those infected – 88% – will have a fever and feel tired. Many also have muscle pain and a dry cough." + "</p>" +
         "<p>Some people, around 10% according to the study from China, experience nausea or have diarrhea in the days just before the fever begins.</p>";
     dateArea.appendChild(day1);
 
     var day2to4 = document.createElement("li");
-    day2to4.setAttribute('list-style-type','none');        //NOT working
+    day2to4.setAttribute('list-style-type','none');        
     day2to4.innerHTML = "<h5 class='green'><b>"+ arrDates[1].toDateString() + " to " + arrDates[3].toDateString()+ "</b></h5>" +   
-    "<p>The average duration of fever was 12 days. Ninety-nine percent of the patients studied had a fever. About 50% felt fatigued and had a dry cough, with 33% having difficulty breathing and complaining of muscle pain.</p>";
+    "<p>The fever persists as does the cough.</p>";
     dateArea.appendChild(day2to4);    
     
     var day5 = document.createElement("li");
-    day5.setAttribute('list-style-type','none');       //NOT working
+    day5.setAttribute('list-style-type','none');       
     day5.innerHTML = "<h5 class='green'><b>"+ arrDates[4].toDateString()+ "</b></h5>" + 
-    "<p>The average duration of fever was 12 days. Ninety-nine percent of the patients studied had a fever. About 50% felt fatigued and had a dry cough, with 33% having difficulty breathing and complaining of muscle pain.</p>";
+    "<p>Breathing difficulty begins on day 5. It is especially likely to happen if the person has a preexisting condition or is older.</p>";
     dateArea.appendChild(day5);
 
     var day6 = document.createElement("li");
-    day6.setAttribute('list-style-type','none');       //NOT working
+    day6.setAttribute('list-style-type','none');       
     day6.innerHTML = "<h5 class='green'><b>"+ arrDates[5].toDateString()+ "</b></h5>" + 
     "<p>Breathing difficulty, cough and fever persist. Some people describe chest tightening or having a feeling that a “band” is around their chest.</p>";
     dateArea.appendChild(day6);
 
     var day7 = document.createElement("li");
-    day7.setAttribute('list-style-type','none');       //NOT working
+    day7.setAttribute('list-style-type','none');       
     day7.innerHTML = "<h5 class='green'><b>"+ arrDates[6].toDateString()+ "</b></h5>" + 
-    "<p>Breathing difficulty, cough and fever persist. Some people describe chest tightening or having a feeling that a “band” is around their chest.</p>";
+    "<p>It is on this day that people who have been experiencing persistent chest pain or pressure, shortness of breath and bluish lips or face are admitted to the hospital. People who are suffering less severe symptoms will likely see those symptoms begin to get better.</p>";
     dateArea.appendChild(day7);
 
     var day8 = document.createElement("li");
-    day8.setAttribute('list-style-type','none');       //NOT working
+    day8.setAttribute('list-style-type','none');       
     day8.innerHTML = "<h5 class='green'><b>"+ arrDates[7].toDateString()+ "</b></h5>" + 
-    "<p>Breathing difficulty, cough and fever persist. Some people describe chest tightening or having a feeling that a “band” is around their chest.</p>";
+    "<p>According to the Chinese Center for Disease Control and Prevention, about 15% of people with COVID-19 will develop symptoms of ARDs, or acute respiratory distress syndrome. According to the Mayo Clinic, ARDs “happens when fluid builds up in the tiny, elastic air sacs (alveoli) in your lungs. The fluid keeps your lungs from filling with enough air, which means less oxygen reaches your bloodstream. This deprives your organs of the oxygen they need to function.”</p>";
     dateArea.appendChild(day8);
 
     var day10 = document.createElement("li");
-    day10.setAttribute('list-style-type','none');       //NOT working
+    day10.setAttribute('list-style-type','none');       
     day10.innerHTML = "<h5 class='green'><b>"+ arrDates[9].toDateString()+ "</b></h5>" + 
-    "<p>Breathing difficulty, cough and fever persist. Some people describe chest tightening or having a feeling that a “band” is around their chest.</p>";
+    "<p>If breathing difficulties worsen, it is on this day that patients who are in the hospital will tend to enter the intensive care unit.</p>";
     dateArea.appendChild(day10);
 
     var day12 = document.createElement("li");
-    day12.setAttribute('list-style-type','none');       //NOT working
+    day12.setAttribute('list-style-type','none');       
     day12.innerHTML = "<h5 class='green'><b>"+ arrDates[11].toDateString()+ "</b></h5>" + 
-    "<p>Breathing difficulty, cough and fever persist. Some people describe chest tightening or having a feeling that a “band” is around their chest.</p>";
+    "<p>In the Wuhan study, fever ended for most people on Day 12. Many still had a cough.</p>";
     dateArea.appendChild(day12);
 
     var day13to14 = document.createElement("li");
-    day13to14.setAttribute('list-style-type','none');       //NOT working
+    day13to14.setAttribute('list-style-type','none');       
     day13to14.innerHTML = "<h5 class='green'><b>"+ arrDates[12].toDateString() + " to " + arrDates[13].toDateString() + "</b></h5>" + 
-    "<p>Breathing difficulty, cough and fever persist. Some people describe chest tightening or having a feeling that a “band” is around their chest.</p>";
+    "<p>For those who will survive the virus, breathing difficulties are generally ending on these days.</p>";
     dateArea.appendChild(day13to14);
 
     var day18 = document.createElement("li");
-    day18.setAttribute('list-style-type','none');       //NOT working
+    day18.setAttribute('list-style-type','none');       
     day18.innerHTML = "<h5 class='green'><b>"+ arrDates[17].toDateString() + "</b></h5>" + 
-    "<p>Breathing difficulty, cough and fever persist. Some people describe chest tightening or having a feeling that a “band” is around their chest.</p>";
+    "<p>For those who do not survive the virus, the average number of days from onset of symptoms until death is 18 1/2 days.</p>";
     dateArea.appendChild(day18);
 };
 
@@ -162,6 +162,7 @@ var dateInput = new Date();
 //*********************** */
 
 //**     Pagination  */
+//This is triggered when the page loads - once
 $(document).ready(function(){
   $('#comment_info').pageMe({
     pagerSelector:'#myPager',
@@ -174,6 +175,8 @@ $(document).ready(function(){
   });
 });
 
+//Called to recreate the pagination when we remove previous pagination
+//and when new comments are added
 var pagTest = function (){
   $('#comment_info').pageMe({
     pagerSelector:'#myPager',
@@ -192,15 +195,11 @@ function commentPopulate(){  //Triggered onLoad
   retrievedList = localStorage.getItem('userComment');
   retrievedList = JSON.parse(retrievedList);
 
-  console.log('Retrieved list length: '+ retrievedList.length);
-  console.log(retrievedList);
-
   var retrievedArrLength = retrievedList.length;
   //To retrieve older data (if available)
   var i=0;
   while(i<retrievedArrLength){
      var savedData = retrievedList.pop();
-     console.log(JSON.stringify(savedData));
      objectArraylist.unshift(savedData);
      createComment(savedData);
      i++;
@@ -233,15 +232,19 @@ var commentor = function (e){
 
 var newPagination = function(){
 
+  //remove existing pagination
   document.getElementById('myPager').remove();
 
+  //link to paginator page selector
   var pag = document.getElementById('pagLink');
 
+  //create a new paginator element
   var newUl = document.createElement('ul');
   newUl.classList = "pagination pager";
   newUl.setAttribute('id','myPager');
   pag.appendChild(newUl);
 
+  //call paginator (to validate data and create new buttons)
   pagTest();
 };
 
@@ -258,8 +261,10 @@ var createComment = function(arrayComment){
   tbody.prepend(comment)
   commentArea.prepend(tbody);  //to add to the top
 
+  //remove old and create new pagination
   newPagination();
 
+  //so that there can't be an empty comment
   submit.disabled = true;
 };
 
