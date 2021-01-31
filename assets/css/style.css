@@ -81,6 +81,7 @@ iframe {
 /*** Dynamic Chat container styles ***/
 .chat {
   margin-top: 15px;
+  margin-bottom: 15px;
 }
 .typing {
   padding-right: 15px;
@@ -462,11 +463,17 @@ iframe {
 
   }
 
-  @media only screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) {
+@media only screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) {
     nav .brand-logo {
       font-size: 18px;
     }
-    }
+}
+
+@media only screen and (device-width: 411px) and (device-height: 731px) and (-webkit-device-pixel-ratio: 3) {
+      nav .brand-logo {
+        font-size: 18px;
+      }
+}
   
 
   @media only screen and (min-device-width: 320px) and (max-device-width: 568px) 
