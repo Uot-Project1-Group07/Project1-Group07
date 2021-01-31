@@ -26,8 +26,8 @@
     <div>   
       <nav>
         <div class="nav-wrapper green">
-          <a class="brand-logo flex-text">Personal Care</a>
-          <ul class="right">
+          <a class="brand-logo flow-text">Personal Care</a>
+          <ul class="right flow-text">
             <li><a href="./index.html">Home Page</a></li>
           </ul>
         </div>
@@ -84,20 +84,20 @@
       </div>
       <div class="row">
         <div class="col s12 m3">
-          <h4 class="flow-text">Family</h4>
+          <h4 class="flow-text green">Family</h4>
           <p>This was my biggest pillar. Someone to talk to about evering that was happening to you. 
             Even thought they wheren't able to help directly, having someone to talk to daily helped releive the stress a little. 
             Just be careful when they visit or get incontact with something you have been using.</p>
         </div>
 
         <div class="col s12 m3">
-          <h4 class="flow-text">Friends & Loved ones</h4>
+          <h4 class="flow-text yellow">Friends & Loved ones</h4>
           <p>Let your freinds know what you have been going through. Don't be ashamed or embarressed. It will isolate you and couse you even more suffering.
              Talk to them maybe about their day. It's a good way to distract your mind and also to connect with the outside world.</p>
         </div>
 
         <div class="col s12 m3">
-          <h4 class="flow-text">Religion</h4>
+          <h4 class="flow-text teal">Religion</h4>
           <p>Might not seem like the best place to look for comfort since might feel forsaken. If nothing else, 2020 has tought us that nothing 
             is permanent and man is just a passenger in the grand scheme of things. Even if you don't fully accept the existance of a diety the 
             thought of a supernatural being able to aid you will help you keep hope alive. Hope that you might be one of those individulas that are asymptomatic
@@ -106,7 +106,7 @@
         </div>
 
         <div class="col s12 m3">
-          <h4 class="flow-text">Games and Web surfing</h4>
+          <h4 class="flow-text blue">Games and Web surfing</h4>
           <p>Playing games was was my goto source of distacting myself and wasting time. If possible invest in a streaming service. You will end up 
             watching entire series in a few days. Finally I recommend watching comedy shows. It will help you bring your spirits up. Even if it's a little.
           </p>
@@ -205,12 +205,14 @@
         </div>
       </div>
 
-      <h3 class="flow-text"> Please consider before you go out</h3>
-      <ul class="collection">
-        <li class="collection-item">How your actions <b>will</b> effect others.</li>
-        <li class="collection-item">Practice social distancing deligently.</li>
-        <li class="collection-item">Wear a mask anytime you are near anyone.</li>
-      </ul>
+      <section>
+      <h3 class="flow-text" style="font-size: larger-x;"> Please consider before you go out</h3>
+        <ul class="collection">
+          <li class="collection-item">How your actions <b>will</b> effect others.</li>
+          <li class="collection-item">Practice social distancing deligently.</li>
+          <li class="collection-item">Wear a mask anytime you are near anyone.</li>
+        </ul>
+      </section>
 
       <!-- Possibilty of getting Covid again-->
       <h4 class="flow-text"><u>Can I get Covid again?</u></h4>
@@ -239,9 +241,6 @@
             </div>
             <div class="col 1">
               <button class="waves-effect waves-light btn" type="submit" id="submitButton">Submit<i class="material-icons right">send</i></a>
-            </div>
-            <div class="col 1">
-              <button class="waves-effect waves-light btn" type="button" onclick="clearing()">Clear history</button>
             </div>
         </div>
         </form>
@@ -287,12 +286,6 @@
       <script type="text/javascript" src="https://cdn.rawgit.com/pinzon1992/materialize_table_pagination/f9a8478f/js/pagination.js"></script>           
       <!--My Javascript coding-->
       <script src="./assets/js/manjula-script.js"></script>
-
-      <script>
-        function clearing(){   //For testing
-            localStorage.clear();
-        }
-      </script>
     </div>
   </body>
 </html>
