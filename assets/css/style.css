@@ -392,6 +392,15 @@ iframe {
   /* This will be applied on any screen smaller than 768px */
 @media screen and (max-width: 768px) {
 
+    .sidenav{
+      width: 10%;
+    }
+
+    .sidenav > li{
+      writing-mode: vertical-lr;
+      text-orientation: mixed;
+    }
+
     .container-width{
       margin:0;
       width:100%;
