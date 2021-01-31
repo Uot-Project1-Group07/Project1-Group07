@@ -193,17 +193,22 @@ var pagTest = function (){
 function commentPopulate(){  //Triggered onLoad
   //retrieve old
   retrievedList = localStorage.getItem('userComment');
-  retrievedList = JSON.parse(retrievedList);
+  if(!retrievedList) {
+    return;
 
-  var retrievedArrLength = retrievedList.length;
-  //To retrieve older data (if available)
-  var i=0;
-  while(i<retrievedArrLength){
-     var savedData = retrievedList.pop();
-     objectArraylist.unshift(savedData);
-     createComment(savedData);
-     i++;
-  };
+  } else {
+  retrievedList = JSON.parse(retrievedList);
+  
+    var retrievedArrLength = retrievedList.length;
+    //To retrieve older data (if available)
+    var i=0;
+    while(i<retrievedArrLength){
+      var savedData = retrievedList.pop();
+      objectArraylist.unshift(savedData);
+      createComment(savedData);
+      i++;
+    };
+  } 
 };
 
 var commentor = function (e){
