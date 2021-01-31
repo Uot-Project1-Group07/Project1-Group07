@@ -462,6 +462,20 @@ iframe {
         text-align: left;
         /*margin-bottom: 1rem;*/
     }
-  
+
   }
 
+  @media only screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) {
+    nav .brand-logo {
+      font-size: 18px;
+    }
+    }
+  
+
+  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) 
+and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 40/71)
+{
+   nav .brand-logo {
+     font-size: 18px;
+   }
+}
