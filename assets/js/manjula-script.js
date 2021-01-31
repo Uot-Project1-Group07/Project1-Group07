@@ -195,14 +195,15 @@ function commentPopulate(){  //Triggered onLoad
   console.log('Retrieved list length: '+ retrievedList.length);
   console.log(retrievedList);
 
-  // To retrieve older data (if available)
+  var retrievedArrLength = retrievedList.length;
+  //To retrieve older data (if available)
   var i=0;
-  while(i<=retrievedList.length){
-    var savedData = retrievedList.pop();
-    console.log(JSON.stringify(savedData));
-    objectArraylist.unshift(savedData);
-    createComment(savedData);
-    i++;
+  while(i<retrievedArrLength){
+     var savedData = retrievedList.pop();
+     console.log(JSON.stringify(savedData));
+     objectArraylist.unshift(savedData);
+     createComment(savedData);
+     i++;
   };
 };
 
