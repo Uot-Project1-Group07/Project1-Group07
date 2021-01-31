@@ -390,7 +390,11 @@ iframe {
 
 /*** End Alexis/Anagha Google Map API CSS ***/
 
+/* User Name display on landing page */
 
+.name-display{
+font-style: italic;
+}
 
 
 

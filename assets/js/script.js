@@ -524,3 +524,19 @@ areaSelectEl.addEventListener("change", areaSelectHandler);
 getCanadaData();
 
 // *** End Kris Section for Cities API *** //
+
+
+// *** Raj Display Username + Age group Start *** //
+
+//Target username input from local storage 
+var userId = JSON.parse(localStorage.getItem('user-info'));
+var userName = userId[0].iD;
+var nameDisplay = document.querySelector('#name-display');
+//Display user name on landing page
+nameDisplay.textContent = "Welcome " + userName + '!';
+//Remove href so user does not go hack to login page
+nameDisplay.removeAttribute('href');
+//Make element Italic to stand out
+nameDisplay.classList.add('name-display');
+
+// *** End of Raj Local Storage user name display  *** //
