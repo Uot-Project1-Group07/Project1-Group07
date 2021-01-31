@@ -13,9 +13,9 @@
 
 Desktop screen > 1298x:
 
-![Top-Page-Area](./assets/images/Landing-Page-Large.JPG?raw=true "Landing-Page-Large")
+![Top-Page-Area](./assets/images/Landing-Page-Large-Updated.JPG?raw=true "Landing-Page-Large")
 
-Desktop screen 768px:
+Smaller screen Tablets 768px:
 
 ![Top-Page-Area](./assets/images/Landing-Page-Ipad.JPG?raw=true "Landing-Page-Ipad")
 
@@ -47,6 +47,18 @@ https://uot-project1-group07.github.io/project1-group07/
 
 ### Testing the application
 
+### Please log in using our Login Button
+### Once on the log in page, login by using a name and a password.
+### At the end of your password, please ensure to add "-" then the value of your age. Example: "password-30" to reflect the age of a thirty year old.
+
+![nav-menu](./assets/images/Login-Page-Button.JPG?raw=true "Login-Page-Button")
+
+![nav-menu](./assets/images/Login-Page-Landing.JPG?raw=true "Login-Page-Landing")
+
+![nav-menu](./assets/images/Login-Page-Modal.JPG?raw=true "Login-Page-Modal")
+
+
+
 #### Please note that full map functionality will be added in the future e.g Node.js
 #### Accept GeoLocation cookie to see the map results output. 
 #### Results are 5 KM radius, with furthest showing first.This feature will be improved in the future.
@@ -77,8 +89,9 @@ https://uot-project1-group07.github.io/project1-group07/
 ### Visit our personal care to explore the supporting documentation available
 ### Choose when you think you contracted COVID in order to receive detailed information
 
-
 ![nav-menu](./assets/images/Personal-Page-Button.JPG?raw=true "Personal-Page-Button")
+
+![nav-menu](./assets/images/Personal-Page.JPG?raw=true "Personal-Page")
 
 ![nav-menu](./assets/images/Personal-Page-Date-Picker.JPG?raw=true "Personal-Page-Date-Picker")
 
