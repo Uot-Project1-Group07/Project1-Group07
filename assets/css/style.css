@@ -83,6 +83,14 @@ iframe {
   margin-top: 15px;
   margin-bottom: 15px;
 }
+
+.title-chat{
+  top: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+}
+
 .typing {
   padding-right: 15px;
   padding-left: 15px;
@@ -390,14 +398,16 @@ iframe {
 
 /*** End Alexis/Anagha Google Map API CSS ***/
 
+/* User Name display on landing page */
 
+.name-display{
+font-style: italic;
+}
 
 
 
   /* This will be applied on any screen smaller than 768px */
 @media screen and (max-width: 768px) {
-
-
 
     .container-width{
       margin:0;
