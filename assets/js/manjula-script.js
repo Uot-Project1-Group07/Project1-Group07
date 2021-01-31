@@ -199,7 +199,7 @@ function commentPopulate(){  //Triggered onLoad
   } else {
   retrievedList = JSON.parse(retrievedList);
   
-    var retrievedArrLength = retrievedList.length;
+    var retrievedArrLength = retrievedList.length -1;
     //To retrieve older data (if available)
     var i=0;
     while(i<retrievedArrLength){
