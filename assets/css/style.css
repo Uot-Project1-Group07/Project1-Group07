@@ -111,13 +111,13 @@ iframe {
     margin-bottom: 5px;
     font-size: 1rem;
     text-align: left;
-    /*margin-bottom: 1rem;*/
+    margin-bottom: 1px;
+    padding: 0 8px;    
 }
 
 #area-stats {
-    display: flex;
-    flex-direction: column;
-
+  display: flex;
+  flex-direction: column;
 }
 
 .btn-more {
@@ -139,7 +139,17 @@ iframe {
 .covid-related-conatiner {
     display: flex;
     flex-direction: column;
-    
+    border-radius: 8px;    
+}
+
+.stat-card {
+  border-radius: 8px;
+}
+
+#stat-credit a {
+  color: white;
+  outline: none;
+  text-decoration: none;
 }
 
 .affiliations-related-containter {
@@ -382,6 +392,20 @@ iframe {
   /* This will be applied on any screen smaller than 768px */
 @media screen and (max-width: 768px) {
 
+    .sidenav{
+      width: 10%;
+    }
+
+    .sidenav > li{
+      writing-mode: vertical-lr;
+      text-orientation: mixed;
+    }
+
+    .container-width{
+      margin:0;
+      width:100%;
+    }
+
     .covid-related-conatiner {
         margin-top: 0rem;
     }
@@ -400,10 +424,8 @@ iframe {
 @media only screen and (min-width: 601px) {
     .container-width {
         width: 100%;
-        max-width: none;
-    
-    }
-    
+        max-width: none;    
+    }    
 }
 
 

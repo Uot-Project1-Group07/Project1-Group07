@@ -13,7 +13,7 @@ $(document).ready(function(){// *** jQuery section *** //
             var longitude = p.coords.longitude;
             var position = latitude + "," + longitude; // from this we have determined the coordinates from the browser and made them a string, which we can pass into the url. 
 
-            console.log(position); //logging the position to the console in order to verify that function is working
+            //console.log(position); //logging the position to the console in order to verify that function is working
 
             var url = "https://www.google.com/maps/embed/v1/view?center="+position+"&zoom=14&key=AIzaSyDs--vVtRh3_b44YkAcNtzhQ_BrgJdpat4";
             $("iframe").attr('src',url); //this generates the map supplying the empty src attribute with the url plus string coordinates
@@ -165,7 +165,7 @@ function getstores(lat,lon)
             var oepnstore = data.results[0].opening_hours.open_now;
             var ratingstore = data.results[0].rating;
             var addressstore = data.results[0].vicinity;
-            console.log(nm,oepnstore,ratingstore,addressstore);
+           // console.log(nm,oepnstore,ratingstore,addressstore);
             if(oepnstore===true)
             {
             oepnstore="Open now";
@@ -242,7 +242,7 @@ $(document).ready(function ()
 
 
 // Options the user could type in
-const prompts = [
+var prompts = [
   ["hi", "hey", "hello","hi there"], 
   ["good morning"], ["good afternoon"],["good night"],
   ["how are you", "how is life", "how are things"],
@@ -268,7 +268,7 @@ const prompts = [
 
 // Possible responses, in corresponding order
 
-const replies = [
+var replies = [
   ["Hello!", "Hi!", "Hey!", "Hi there!"],
   ["good morning"], ["good afternoon"],["good night"],
   [
@@ -297,7 +297,7 @@ const replies = [
 
 // Random for any other user input
 
-const alternative = [
+var alternative = [
   "Same",
   "Go on...",
   "Sorry I don't understand :/",
@@ -307,16 +307,16 @@ const alternative = [
 
 // any other responses for covid word found
 
-const coronavirus = ["Please stay home", "Wear a mask", "Fortunately, I have COVID", "These are uncertain times",
+var coronavirus = ["Please stay home", "Wear a mask", "Fortunately, I have COVID", "These are uncertain times",
                      "Need to take precautions"]
 
 
 //get input on keyenter event
-document.addEventListener("DOMContentLoaded", () => {
-  const inputField = document.getElementById("input");
+document.addEventListener("DOMContentLoaded", function() {
+  var inputField = document.getElementById("input");
   // Element of clicked chat button
   var chatBtnEl = document.querySelector("#chat-button");
-  inputField.addEventListener("keydown", (e) => {
+  inputField.addEventListener("keydown", function(e) {
     if (e.code === "Enter") {
       let input = inputField.value;
       inputField.value = "";
@@ -325,7 +325,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
     var chatClicked = function (event) {
-      let input = inputField.value;
+      var input = inputField.value;
       inputField.value = "";
       output(input);
   }
@@ -335,7 +335,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function output(input) {
-  let product;
+  var product;
 
   // Regex remove non word/space chars
   // Trim trailing whitespce
@@ -343,7 +343,7 @@ function output(input) {
   // But solves problem of entering something like 'hi1'
 
  
-  let text = input.toLowerCase().replace(/[^\w\s]/gi, "").replace(/[\d]/gi, "").trim();
+  var text = input.toLowerCase().replace(/[^\w\s]/gi, "").replace(/[\d]/gi, "").trim();
   text = text
     .replace(/ a /g, " ")   // 'tell me a story' -> 'tell me story'
     .replace(/i feel /g, "")
@@ -370,8 +370,8 @@ function output(input) {
 }
 
 function compare(promptsArray, repliesArray, string) {
-  let reply;
-  let replyFound = false;
+  var reply;
+  var replyFound = false;
   for (let x = 0; x < promptsArray.length; x++) {
     for (let y = 0; y < promptsArray[x].length; y++) {
       if (promptsArray[x][y] === string) {
@@ -391,17 +391,17 @@ function compare(promptsArray, repliesArray, string) {
 }
 
 function addChat(input, product) {
-  const messagesContainer = document.getElementById("messages");
+  var messagesContainer = document.getElementById("messages");
 
-  let user1Div = document.createElement("div");
+  var user1Div = document.createElement("div");
   user1Div.id = "user";
   user1Div.className = "user response";
   user1Div.innerHTML = `<img src="./assets/images/carrot.JPG" class="userimg circle"><span>${input}</span>`;
   messagesContainer.appendChild(user1Div);
 
-  let user2Div = document.createElement("div");
-  let user2Img = document.createElement("img");
-  let user2Text = document.createElement("span");
+  var user2Div = document.createElement("div");
+  var user2Img = document.createElement("img");
+  var user2Text = document.createElement("span");
   user2Div.id = "user2";
   user2Div.className = "response";
   user2Img.src = "./assets/images/rabbit.JPG";
@@ -415,7 +415,7 @@ function addChat(input, product) {
   
 
   // Fake delay to seem "real"
-  setTimeout(() => {
+  setTimeout(function() {
     user2Text.innerText = `${product}`;    
   }, 2000
   )
@@ -434,15 +434,14 @@ var canadaVaccinatedEl = document.querySelector("#CAvaccinated");
 var canadaRecoveredNewEl = document.querySelector("#CArecoverednew");
 var canadaVaccineNewEl = document.querySelector("#CAvaccinatednew");
 var areaStatsEl = document.querySelector("#area-stats");
-
+var statDateEl = document.querySelector("#stat-date");
 
 //get data for selected area
 var getAreaData = function(area) {
   var areaSearchUrl = "https://api.opencovid.ca/summary?loc=" + area;
   
   fetch(areaSearchUrl).then(function(response) {
-    response.json().then(function(data) {
-      //console.log(data);
+    response.json().then(function(data) {      
       displayAreaData(data);
     })
   })
@@ -453,77 +452,71 @@ var getAreaData = function(area) {
 var areaSelectHandler  = function(event) {
   event.preventDefault();
   var areaCode = areaSelectEl.value;
-  //console.log(areaCode);
   getAreaData(areaCode);
 }
 
 //get Canada wide stats and display them
 var getCanadaData = function() {
   fetch("https://api.opencovid.ca").then(function(response) {
-    response.json().then(function(data) {
-      // console.log(data);
+    response.json().then(function(data) {      
       var caRecovered = data.summary[0].cumulative_recovered;
       var caVaccinated = data.summary[0].cumulative_avaccine;
       var caRecoveredNew = data.summary[0].recovered;
       var caVaccinatedNew = data.summary[0].avaccine;
+      var statVersion = data.version;
       canadaRecoveredEl.textContent = caRecovered;
       canadaVaccinatedEl.textContent = caVaccinated;
       canadaRecoveredNewEl.textContent = caRecoveredNew;
       canadaVaccineNewEl.textContent = caVaccinatedNew
+      statDateEl.textContent = statVersion;
     })
   })
 }
 
 var displayAreaData = function(data) {
-    // create data variables
-    var areaName = data.summary[0].province;
-    var areaRecoveredNew = data.summary[0].recovered;
-    var areaRecovered = data.summary[0].cumulative_recovered;
-    var areaVaccineNew = data.summary[0].avaccine;
-    var areaVaccinated = data.summary[0].cumulative_avaccine;
-    
-    //clear old data
-    areaStatsEl.textContent = ""
-    
-    //create stat title element
-    var areaTitleEl = document.createElement("p");
-    areaTitleEl.classList.add("btn", "btn-city", "green", "accent-4");
-    areaTitleEl.textContent = areaName + " Stats";
-    areaStatsEl.appendChild(areaTitleEl);
+  // create data variables
+  var areaName = data.summary[0].province;
+  var areaRecoveredNew = data.summary[0].recovered;
+  var areaRecovered = data.summary[0].cumulative_recovered;
+  var areaVaccineNew = data.summary[0].avaccine;
+  var areaVaccinated = data.summary[0].cumulative_avaccine;  
   
-    //create new recoveries element
-    var newRecoveriesEl = document.createElement("p");
-    newRecoveriesEl.classList = ("btn btn-city waves-effect waves-light") ;
-    newRecoveriesEl.textContent = "New Recoveries: " + areaRecoveredNew;
-    areaStatsEl.appendChild(newRecoveriesEl);
+  //clear old data
+  areaStatsEl.textContent = ""
   
-    //create total recoveries element
-    var totalRecoveriesEl = document.createElement("p");
-    //totalRecoveriesEl.classList.add("btn", "btn-city");
-    totalRecoveriesEl.classList = ("btn btn-city waves-effect waves-light") ;
-    totalRecoveriesEl.textContent = "Total Recovered: " + areaRecovered;
-    areaStatsEl.appendChild(totalRecoveriesEl);
-  
-    //create new vaccinations element
-    var newVaccinationsEl = document.createElement("p");
-    //newVaccinationsEl.classList.add("btn", "btn-city");
-    newVaccinationsEl.classList = ("btn btn-city waves-effect waves-light") ;
-    newVaccinationsEl.textContent = "New Vaccinations: " + areaVaccineNew;
-    areaStatsEl.appendChild(newVaccinationsEl);
-  
-    //create total vaccinations element
-    var totalVaccinationsEl = document.createElement("p");
-    //totalVaccinationsEl.classList.add("btn", "btn-city");
-    totalVaccinationsEl.classList = ("btn btn-city waves-effect waves-light") ;
-    totalVaccinationsEl.textContent = "Total Vaccinations: " + areaVaccinated;
-    areaStatsEl.appendChild(totalVaccinationsEl); 
-  }
+  //create stat title element
+  var areaTitleEl = document.createElement("h5");
+  areaTitleEl.classList.add("card-title", "green", "accent-4");
+  areaTitleEl.textContent = areaName + " Stats";
+  areaStatsEl.appendChild(areaTitleEl);
+
+  //create stat card panel
+  var statPanelEl = document.createElement("div");
+  statPanelEl.classList.add("card-panel", "teal", "lighten-1", "stat-card");
+  areaStatsEl.appendChild(statPanelEl);
+
+  //create new recoveries element
+  var newRecoveriesEl = document.createElement("p");  
+  newRecoveriesEl.textContent = "New Recoveries: " + areaRecoveredNew;
+  statPanelEl.appendChild(newRecoveriesEl);
+
+  //create total recoveries element
+  var totalRecoveriesEl = document.createElement("p");  
+  totalRecoveriesEl.textContent = "Total Recovered: " + areaRecovered;
+  statPanelEl.appendChild(totalRecoveriesEl);
+
+  //create new vaccinations element
+  var newVaccinationsEl = document.createElement("p");  
+  newVaccinationsEl.textContent = "New Vaccinations: " + areaVaccineNew;
+  statPanelEl.appendChild(newVaccinationsEl);
+
+  //create total vaccinations element
+  var totalVaccinationsEl = document.createElement("p");  
+  totalVaccinationsEl.textContent = "Total Vaccinations: " + areaVaccinated;
+  statPanelEl.appendChild(totalVaccinationsEl); 
+}
 
 
-//document.addEventListener('DOMContentLoaded', function() {
-//  var elems = document.querySelectorAll('select');
-//  var instances = M.FormSelect.init(elems, options);
-//});
 
 areaSelectEl.addEventListener("change", areaSelectHandler);
 

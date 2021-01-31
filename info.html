@@ -13,11 +13,11 @@
     <style>
       li{
         list-style: none;
-      }
+      };
     </style>
     <title>Personal Care</title>
   </head>
-  <body>
+  <body onload="commentPopulate()">
 
   <div class="container container-width">
 
@@ -26,8 +26,8 @@
     <div>   
       <nav>
         <div class="nav-wrapper green">
-          <a class="brand-logo">Personal Care</a>
-          <ul class="right">
+          <a class="brand-logo flow-text">Personal Care</a>
+          <ul class="right flow-text">
             <li><a href="./index.html">Home Page</a></li>
           </ul>
         </div>
@@ -84,20 +84,20 @@
       </div>
       <div class="row">
         <div class="col s12 m3">
-          <h4 class="flow-text">Family</h4>
+          <h4 class="flow-text green">Family</h4>
           <p>This was my biggest pillar. Someone to talk to about evering that was happening to you. 
             Even thought they wheren't able to help directly, having someone to talk to daily helped releive the stress a little. 
             Just be careful when they visit or get incontact with something you have been using.</p>
         </div>
 
         <div class="col s12 m3">
-          <h4 class="flow-text">Friends & Loved ones</h4>
+          <h4 class="flow-text yellow">Friends & Loved ones</h4>
           <p>Let your freinds know what you have been going through. Don't be ashamed or embarressed. It will isolate you and couse you even more suffering.
              Talk to them maybe about their day. It's a good way to distract your mind and also to connect with the outside world.</p>
         </div>
 
         <div class="col s12 m3">
-          <h4 class="flow-text">Religion</h4>
+          <h4 class="flow-text teal">Religion</h4>
           <p>Might not seem like the best place to look for comfort since might feel forsaken. If nothing else, 2020 has tought us that nothing 
             is permanent and man is just a passenger in the grand scheme of things. Even if you don't fully accept the existance of a diety the 
             thought of a supernatural being able to aid you will help you keep hope alive. Hope that you might be one of those individulas that are asymptomatic
@@ -106,7 +106,7 @@
         </div>
 
         <div class="col s12 m3">
-          <h4 class="flow-text">Games and Web surfing</h4>
+          <h4 class="flow-text blue">Games and Web surfing</h4>
           <p>Playing games was was my goto source of distacting myself and wasting time. If possible invest in a streaming service. You will end up 
             watching entire series in a few days. Finally I recommend watching comedy shows. It will help you bring your spirits up. Even if it's a little.
           </p>
@@ -114,7 +114,7 @@
       </div>
       
       <div class="row">
-        <div class="col s12 m6">
+        <div class="col s12 m6" style="background-image: url('./assets/images/beautiful-green-nature-background-banner-website-floral-design-artistic-abstract-flowers-leaves-incredibly-fantasy-modern-art-141238065.jpg">
 
           <!--symptoms-->
           <h4 class="flow-text">Keep track of your symptoms progression</h4>
@@ -139,7 +139,7 @@
                 <!-- Modal Structure -->
                 <div id="modal1" class="modal">
                   <div class="modal-content">
-                    <embed src="./assets/pdf/cropped.pdf" width="1000px" height="990px" />
+                    <img src="./assets/modal/cropped-1.png" alt=""  style="width:100%; height:50%" />
                   </div>
                 </div>
               </li>
@@ -159,7 +159,7 @@
         <!--Govt. funding-->
         <div class="col s12 m6">
           <h4 class="flow-text right-align">Govt. funding</h4>
-          <ul class="collapsible ">
+          <ul class="collapsible popout">
             <li>
               <div class="collapsible-header"><i class="material-icons">arrow_drop_down_circle</i>Emplyment Insurence (EI) program</div>
               <div class="collapsible-body">
@@ -205,12 +205,14 @@
         </div>
       </div>
 
-      <h3 class="flow-text"> Please consider before you go out</h3>
-      <ul class="collection">
-        <li class="collection-item">How your actions <b>will</b> effect others.</li>
-        <li class="collection-item">Practice social distancing deligently.</li>
-        <li class="collection-item">Wear a mask anytime you are near anyone.</li>
-      </ul>
+      <section>
+      <h3 class="flow-text" style="font-size: larger-x;"> Please consider before you go out</h3>
+        <ul class="collection">
+          <li class="collection-item">How your actions <b>will</b> effect others.</li>
+          <li class="collection-item">Practice social distancing deligently.</li>
+          <li class="collection-item">Wear a mask anytime you are near anyone.</li>
+        </ul>
+      </section>
 
       <!-- Possibilty of getting Covid again-->
       <h4 class="flow-text"><u>Can I get Covid again?</u></h4>
@@ -224,7 +226,7 @@
       <div class="boxed" style="font-weight: bold;">Any comments of suggestions for the web page is greately appricated. Please list them in the comments section below</div>
 
       <div class="row">
-        <form class="col s12">
+        <form class="col s12" id='form'>
         <div class="row">
             <div class="input-field col s2">
             <img src="./assets/icons/john_doe.png" alt="" class="circle responsive-img" style="width: 50%;">   <!-- circular image-->
@@ -234,7 +236,7 @@
               </div>
             <div class="input-field col s8">
                 <i class="material-icons prefix">mode_edit</i>
-                <textarea class="materialize-textarea" id="user_2"></textarea>
+                <input type="text" class="validate" placeholder="Comment" id="user_2"></textarea>
                 <label for="icon_prefix2">Comment here</label>
             </div>
             <div class="col 1">
@@ -243,6 +245,20 @@
         </div>
         </form>
       </div>
+
+      <div class="row">
+        <div class="col s12 m12 center">
+          <!-- Comment cards appear here-->
+          <table id="comment_info">
+              <tbody id='data_info'>
+              </tbody>
+          </table>
+          <div class="col-md-12 center text-center" id="pagLink">
+              <span class="left" id="total_reg"></span>
+              <ul class="pagination pager" id="myPager"></ul>
+          </div>
+      </div>
+      <br>
 
       <!--New comments entered will appear here-->
       <div id="comment_info">
@@ -265,7 +281,9 @@
 
       <!-- Compiled and minified JavaScript -->
       <script type = "text/javascript" src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>  
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>            
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> 
+      <!-- Pagination link-->
+      <script type="text/javascript" src="https://cdn.rawgit.com/pinzon1992/materialize_table_pagination/f9a8478f/js/pagination.js"></script>           
       <!--My Javascript coding-->
       <script src="./assets/js/manjula-script.js"></script>
     </div>
