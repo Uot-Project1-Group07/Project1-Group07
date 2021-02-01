@@ -13,7 +13,7 @@ $(document).ready(function(){// *** jQuery section *** //
             var longitude = p.coords.longitude;
             var position = latitude + "," + longitude; // from this we have determined the coordinates from the browser and made them a string, which we can pass into the url. 
 
-            console.log(position); //logging the position to the console in order to verify that function is working
+            //console.log(position); //logging the position to the console in order to verify that function is working
 
             var url = "https://www.google.com/maps/embed/v1/view?center="+position+"&zoom=14&key=AIzaSyDs--vVtRh3_b44YkAcNtzhQ_BrgJdpat4";
             $("iframe").attr('src',url); //this generates the map supplying the empty src attribute with the url plus string coordinates
@@ -165,7 +165,7 @@ function getstores(lat,lon)
             var oepnstore = data.results[0].opening_hours.open_now;
             var ratingstore = data.results[0].rating;
             var addressstore = data.results[0].vicinity;
-            console.log(nm,oepnstore,ratingstore,addressstore);
+           // console.log(nm,oepnstore,ratingstore,addressstore);
             if(oepnstore===true)
             {
             oepnstore="Open now";
@@ -177,7 +177,7 @@ function getstores(lat,lon)
            
             var storeEl = document.querySelector(".store1");
             var addressstore = data.results[0].vicinity;
-            storeEl.innerHTML = "Name :"+nm+"</br>"+"Open hours: "+oepnstore+"</br>"+"Store Ratings: "+ratingstore+"</br>"+"Address: "+addressstore+"</br";
+            storeEl.innerHTML = "Name: "+nm+"</br>"+"Open hours: "+oepnstore+"</br>"+"Store Ratings: "+ratingstore+"</br>"+"Address: "+addressstore+"</br";
 
             //store2 data
             var nm = data.results[1].name;  
@@ -196,7 +196,7 @@ function getstores(lat,lon)
             }
 
             var storeEl = document.querySelector(".store2");
-            storeEl.innerHTML = "Name :"+nm+"</br>"+"Open hours: "+oepnstore+"</br>"+"Store Ratings: "+ratingstore+"</br>"+"Address: "+addressstore+"</br";
+            storeEl.innerHTML = "Name: "+nm+"</br>"+"Open hours: "+oepnstore+"</br>"+"Store Ratings: "+ratingstore+"</br>"+"Address: "+addressstore+"</br";
                                                    
               
         })        
@@ -236,6 +236,193 @@ $(document).ready(function ()
 
 // *** End of Alexis/Anagha Google Map API *** //
 
+// *** Dynamic chat container - to be added when node js is avaialable *** //
+
+
+
+
+// Options the user could type in
+var prompts = [
+  ["hi", "hey", "hello","hi there"], 
+  ["good morning"], ["good afternoon"],["good night"],
+  ["how are you", "how is life", "how are things"],
+  ["what are you doing", "what is going on", "what is up"],
+  [
+    "your name please",
+    "your name",
+    "may i know your name",
+    "what is your name",
+    "what call yourself"
+  ],
+  ["happy", "good", "fun", "wonderful", "fantastic", "cool"],
+  ["bad", "bored", "tired"],
+  ["help me", "tell me story", "tell me joke"],
+  ["bye", "good bye", "goodbye", "see you later"],
+  ["what did you eat today"],
+  ["bro"],
+  ["what", "why", "how", "where", "when"],
+  ["no","not sure","maybe","no thanks"],
+  [""],
+  ["haha","ha","lol","hehe","funny","joke"]
+]
+
+// Possible responses, in corresponding order
+
+var replies = [
+  ["Hello!", "Hi!", "Hey!", "Hi there!"],
+  ["good morning"], ["good afternoon"],["good night"],
+  [
+    "Fine... how are you?",
+    "Pretty well, how are you?",
+    "Fantastic, how are you?"
+  ],
+  [
+    "Nothing much",
+    "About to go to sleep",
+    "Can you guess?",
+    "I don't know actually"
+  ],
+  ["My name is ......"],
+  ["Same here..."],
+  ["Why?", "Why? You shouldn't!", "Try watching TV"],
+  ["This site has really good section to read jokes"],  
+  ["Bye", "Goodbye", "See you later"],
+  ["Salad", "Pizza"],
+  ["Bro!"],
+  ["Great question"],
+  ["That's ok","I understand","What do you want to talk about?"],
+  ["Sorry didn't get you"],
+  ["Haha!","Good one!"]
+]
+
+// Random for any other user input
+
+var alternative = [
+  "Same",
+  "Go on...",
+  "Sorry I don't understand :/",
+  "Try again",
+  "I'm listening..."    
+]
+
+// any other responses for covid word found
+
+var coronavirus = ["Please stay home", "Wear a mask", "Fortunately, I have COVID", "These are uncertain times",
+                     "Need to take precautions"]
+
+
+//get input on keyenter event
+document.addEventListener("DOMContentLoaded", function() {
+  var inputField = document.getElementById("input");
+  // Element of clicked chat button
+  var chatBtnEl = document.querySelector("#chat-button");
+  inputField.addEventListener("keydown", function(e) {
+    if (e.code === "Enter") {
+      let input = inputField.value;
+      inputField.value = "";
+      output(input);
+    }
+  });
+
+    var chatClicked = function (event) {
+      var input = inputField.value;
+      inputField.value = "";
+      output(input);
+  }
+
+  chatBtnEl.addEventListener("click", chatClicked);
+
+});
+
+function output(input) {
+  var product;
+
+  // Regex remove non word/space chars
+  // Trim trailing whitespce
+  // Remove digits - not sure if this is best
+  // But solves problem of entering something like 'hi1'
+
+ 
+  var text = input.toLowerCase().replace(/[^\w\s]/gi, "").replace(/[\d]/gi, "").trim();
+  text = text
+    .replace(/ a /g, " ")   // 'tell me a story' -> 'tell me story'
+    .replace(/i feel /g, "")
+    .replace(/whats/g, "what is")
+    .replace(/please /g, "")
+    .replace(/ please/g, "")
+    .replace(/r u/g, "are you");
+
+  if (compare(prompts, replies, text)) { 
+    // Search for exact match in `prompts`
+    product = compare(prompts, replies, text);
+  } else if (text.match(/thank/gi)) {
+    product = "You're welcome!"
+  } else if (text.match(/(corona|covid|virus)/gi)) {
+    // If no match, check if message contains `coronavirus`
+    product = coronavirus[Math.floor(Math.random() * coronavirus.length)];
+  } else {
+    // If all else fails: random alternative
+    product = alternative[Math.floor(Math.random() * alternative.length)];
+  }
+
+  // Update DOM
+  addChat(input, product);
+}
+
+function compare(promptsArray, repliesArray, string) {
+  var reply;
+  var replyFound = false;
+  for (let x = 0; x < promptsArray.length; x++) {
+    for (let y = 0; y < promptsArray[x].length; y++) {
+      if (promptsArray[x][y] === string) {
+        let replies = repliesArray[x];
+        reply = replies[Math.floor(Math.random() * replies.length)];
+        replyFound = true;
+        // Stop inner loop when input value matches prompts
+        break;
+      }
+    }
+    if (replyFound) {
+      // Stop outer loop when reply is found instead of interating through the entire array
+      break;
+    }
+  }
+  return reply;
+}
+
+function addChat(input, product) {
+  var messagesContainer = document.getElementById("messages");
+
+  var user1Div = document.createElement("div");
+  user1Div.id = "user";
+  user1Div.className = "user response";
+  user1Div.innerHTML = `<img src="./assets/images/carrot2.JPG" class="userimg circle"><span>${input}</span>`;
+  messagesContainer.appendChild(user1Div);
+
+  var user2Div = document.createElement("div");
+  var user2Img = document.createElement("img");
+  var user2Text = document.createElement("span");
+  user2Div.id = "user2";
+  user2Div.className = "response";
+  user2Img.src = "./assets/images/rabbit2.JPG";
+  user2Img.classList = "userimg circle";
+  //user2Img.className = "userimg";   
+  user2Text.className = "typing";
+  user2Text.innerText = "Typing...";
+  user2Div.appendChild(user2Text);
+  user2Div.appendChild(user2Img);
+  messagesContainer.appendChild(user2Div);
+  
+
+  // Fake delay to seem "real"
+  setTimeout(function() {
+    user2Text.innerText = `${product}`;    
+  }, 2000
+  )
+
+}
+
+// *** End of chat container - to be added when node js is avaialable *** //
 
 
 
@@ -247,15 +434,14 @@ var canadaVaccinatedEl = document.querySelector("#CAvaccinated");
 var canadaRecoveredNewEl = document.querySelector("#CArecoverednew");
 var canadaVaccineNewEl = document.querySelector("#CAvaccinatednew");
 var areaStatsEl = document.querySelector("#area-stats");
-
+var statDateEl = document.querySelector("#stat-date");
 
 //get data for selected area
 var getAreaData = function(area) {
   var areaSearchUrl = "https://api.opencovid.ca/summary?loc=" + area;
   
   fetch(areaSearchUrl).then(function(response) {
-    response.json().then(function(data) {
-      //console.log(data);
+    response.json().then(function(data) {      
       displayAreaData(data);
     })
   })
@@ -266,77 +452,71 @@ var getAreaData = function(area) {
 var areaSelectHandler  = function(event) {
   event.preventDefault();
   var areaCode = areaSelectEl.value;
-  //console.log(areaCode);
   getAreaData(areaCode);
 }
 
 //get Canada wide stats and display them
 var getCanadaData = function() {
   fetch("https://api.opencovid.ca").then(function(response) {
-    response.json().then(function(data) {
-      // console.log(data);
+    response.json().then(function(data) {      
       var caRecovered = data.summary[0].cumulative_recovered;
       var caVaccinated = data.summary[0].cumulative_avaccine;
       var caRecoveredNew = data.summary[0].recovered;
       var caVaccinatedNew = data.summary[0].avaccine;
+      var statVersion = data.version;
       canadaRecoveredEl.textContent = caRecovered;
       canadaVaccinatedEl.textContent = caVaccinated;
       canadaRecoveredNewEl.textContent = caRecoveredNew;
       canadaVaccineNewEl.textContent = caVaccinatedNew
+      statDateEl.textContent = statVersion;
     })
   })
 }
 
 var displayAreaData = function(data) {
-    // create data variables
-    var areaName = data.summary[0].province;
-    var areaRecoveredNew = data.summary[0].recovered;
-    var areaRecovered = data.summary[0].cumulative_recovered;
-    var areaVaccineNew = data.summary[0].avaccine;
-    var areaVaccinated = data.summary[0].cumulative_avaccine;
-    
-    //clear old data
-    areaStatsEl.textContent = ""
-    
-    //create stat title element
-    var areaTitleEl = document.createElement("p");
-    areaTitleEl.classList.add("btn", "btn-city", "green", "accent-4");
-    areaTitleEl.textContent = areaName + " Stats";
-    areaStatsEl.appendChild(areaTitleEl);
+  // create data variables
+  var areaName = data.summary[0].province;
+  var areaRecoveredNew = data.summary[0].recovered;
+  var areaRecovered = data.summary[0].cumulative_recovered;
+  var areaVaccineNew = data.summary[0].avaccine;
+  var areaVaccinated = data.summary[0].cumulative_avaccine;  
   
-    //create new recoveries element
-    var newRecoveriesEl = document.createElement("p");
-    newRecoveriesEl.classList = ("btn btn-city waves-effect waves-light") ;
-    newRecoveriesEl.textContent = "New Recoveries: " + areaRecoveredNew;
-    areaStatsEl.appendChild(newRecoveriesEl);
+  //clear old data
+  areaStatsEl.textContent = ""
   
-    //create total recoveries element
-    var totalRecoveriesEl = document.createElement("p");
-    //totalRecoveriesEl.classList.add("btn", "btn-city");
-    totalRecoveriesEl.classList = ("btn btn-city waves-effect waves-light") ;
-    totalRecoveriesEl.textContent = "Total Recovered: " + areaRecovered;
-    areaStatsEl.appendChild(totalRecoveriesEl);
-  
-    //create new vaccinations element
-    var newVaccinationsEl = document.createElement("p");
-    //newVaccinationsEl.classList.add("btn", "btn-city");
-    newVaccinationsEl.classList = ("btn btn-city waves-effect waves-light") ;
-    newVaccinationsEl.textContent = "New Vaccinations: " + areaVaccineNew;
-    areaStatsEl.appendChild(newVaccinationsEl);
-  
-    //create total vaccinations element
-    var totalVaccinationsEl = document.createElement("p");
-    //totalVaccinationsEl.classList.add("btn", "btn-city");
-    totalVaccinationsEl.classList = ("btn btn-city waves-effect waves-light") ;
-    totalVaccinationsEl.textContent = "Total Vaccinations: " + areaVaccinated;
-    areaStatsEl.appendChild(totalVaccinationsEl); 
-  }
+  //create stat title element
+  var areaTitleEl = document.createElement("h5");
+  areaTitleEl.classList.add("card-title", "green", "accent-4");
+  areaTitleEl.textContent = areaName + " Stats";
+  areaStatsEl.appendChild(areaTitleEl);
+
+  //create stat card panel
+  var statPanelEl = document.createElement("div");
+  statPanelEl.classList.add("card-panel", "teal", "lighten-1", "stat-card");
+  areaStatsEl.appendChild(statPanelEl);
+
+  //create new recoveries element
+  var newRecoveriesEl = document.createElement("p");  
+  newRecoveriesEl.textContent = "New Recoveries: " + areaRecoveredNew;
+  statPanelEl.appendChild(newRecoveriesEl);
+
+  //create total recoveries element
+  var totalRecoveriesEl = document.createElement("p");  
+  totalRecoveriesEl.textContent = "Total Recovered: " + areaRecovered;
+  statPanelEl.appendChild(totalRecoveriesEl);
+
+  //create new vaccinations element
+  var newVaccinationsEl = document.createElement("p");  
+  newVaccinationsEl.textContent = "New Vaccinations: " + areaVaccineNew;
+  statPanelEl.appendChild(newVaccinationsEl);
+
+  //create total vaccinations element
+  var totalVaccinationsEl = document.createElement("p");  
+  totalVaccinationsEl.textContent = "Total Vaccinations: " + areaVaccinated;
+  statPanelEl.appendChild(totalVaccinationsEl); 
+}
 
 
-//document.addEventListener('DOMContentLoaded', function() {
-//  var elems = document.querySelectorAll('select');
-//  var instances = M.FormSelect.init(elems, options);
-//});
 
 areaSelectEl.addEventListener("change", areaSelectHandler);
 
@@ -344,3 +524,23 @@ areaSelectEl.addEventListener("change", areaSelectHandler);
 getCanadaData();
 
 // *** End Kris Section for Cities API *** //
+
+
+// *** Raj Display Username + Age group Start *** //
+
+//Target username input from local storage 
+var userId = JSON.parse(localStorage.getItem('user-info'));
+if (!userId) {
+  // Do nothing
+} else {
+var userName = userId[0].iD;
+var nameDisplay = document.querySelector('#name-display');
+//Display user name on landing page
+nameDisplay.textContent = "Welcome " + userName + '!';
+//Remove href so user does not go hack to login page
+nameDisplay.removeAttribute('href');
+//Make element Italic to stand out
+nameDisplay.classList.add('name-display');
+}
+
+// *** End of Raj Local Storage user name display  *** //
