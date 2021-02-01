@@ -530,6 +530,9 @@ getCanadaData();
 
 //Target username input from local storage 
 var userId = JSON.parse(localStorage.getItem('user-info'));
+if (!userId) {
+  // Do nothing
+} else {
 var userName = userId[0].iD;
 var nameDisplay = document.querySelector('#name-display');
 //Display user name on landing page
@@ -538,5 +541,6 @@ nameDisplay.textContent = "Welcome " + userName + '!';
 nameDisplay.removeAttribute('href');
 //Make element Italic to stand out
 nameDisplay.classList.add('name-display');
+}
 
 // *** End of Raj Local Storage user name display  *** //
